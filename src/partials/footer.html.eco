@@ -1,0 +1,12 @@
+<div class="ui horizontal icon divider">
+	<i class="unhide icon"></i>
+</div>
+
+<div class="ui center aligned one column grid">
+	<div class="row">
+		<div class="column">
+			<a href="<%= @site.home %>">Home</a>
+			- <a href="<%= @site.github %>">Github</a>
+		</div>
+	</div>
+</div>

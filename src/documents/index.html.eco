@@ -1,0 +1,12 @@
+---
+layout: 'content'
+title: 'Home'
+---
+
+<div class="ui row">
+	<h2 class="header">
+		Home
+	</h2>
+	<p>Include a line like this:</p>
+	<pre><code>/// &lt;reference path="jquery/jquery.d.ts" /&gt;</code></pre>
+</div>

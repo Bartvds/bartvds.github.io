@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "name": "bartvds.github.io",
+  "version": "0.1.0",
+  "description": "DefinitelyTyped website",
+  "homepage": "http://bartvds.github.io",
+  "keywords": [
+    "website"
+  ],
+  "author": {
+    "name": "Bart van der Schoor",
+    "email": "bartvanderschoor@gmail.com"
+  },
+  "maintainers": [],
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/bartvds/bartvds.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bartvds/bartvds.github.io.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/bartvds/bartvds.github/master/LICENSE-MIT.txt"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0 < 0.11.0",
+    "npm": "1.3"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "docpad-plugin-eco": "~2.0.3",
+    "docpad-plugin-marked": "~2.2.0",
+    "docpad-plugin-partials": "~2.9.0",
+    "docpad-plugin-less": "~2.4.1",
+    "docpad-plugin-livereload": "~2.6.0",
+    "grunt": "^0.4.4",
+    "grunt-cli": "^0.1.13",
+    "grunt-docs": "git://github.com/Bartvds/grunt-docs.git",
+    "grunt-gh-pages": "0.9.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "jshint-path-reporter": "^0.1.3",
+    "highlight.js": "^8.0.0"
+  },
+  "main": "node_modules/docpad/bin/docpad-server"
+}

@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Bart van der Schoor
+
+# THANKS
+
+    Contributors -- contributing
+    Users -- using
+
+# TECHNOLOGY COLOPHON
+
+    grunt
+    docpad
