@@ -3,4 +3,19 @@ layout: 'project'
 title: 'TSD'
 ---
 
-Hah.
+- Github: https://github.com/DefinitelyTyped/tsd
+- npm: https://www.npmjs.org/package/tsd
+
+TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.
+
+It is used mostly as a CLI tool, similar to npm or bower. The content is pulled from the Github API, with a lot of (http-)caching. Internally it is mostly Promise/A and a little streaming code.
+
+This was my first big project in TypeScript, and also my biggest project on npm. Current release version has a fair amount of users for something as niche as this; it has Google Analytics integrated and that shows a steady 100-200 significant actions per day, with peaks around 300. On npm I see daily install rate of about 50-100. It is not quite bower-level but then many TypeScript definitions are installed via NuGet or pulled directly from the repository.
+
+I adopted this project from the previous owner who lacked time to take it further. His last version used a huge manually updated JSON file and was very much C#-inspired, heavy OO style. I rewrote it on the Github API in what looks like my old ActionScript 3 code pattern. By talking to Github directly it is always up-2-date.
+
+After a year of using npm and reading blogs I now see the architecture is less then ideal: it is a big monolith and file IO is all over the place. I've picked up on the notions op "the node way" and streams and that will be the way forward. We need that modular code for other DT projects and I want the whole thing to be browserifiable so people can embed it in online code editors.
+
+Overall I'm pretty happy with it. Even though I now disfavor the general architecture I  still stand for the choices made, most of all because it works as intended and sovles a real problem. And there are enough users to make it a real thing and send interesting bug reports.
+
+It was mentioned in a very widely viewed video on Microsoft's Build 2014 conference: http://channel9.msdn.com/Events/Build/2014/3-583 (~22:52)

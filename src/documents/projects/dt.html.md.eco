@@ -1,0 +1,58 @@
+---
+layout: 'project'
+title: 'DefinitelyTyped'
+---
+
+- Organisation: https://github.com/DefinitelyTyped
+- Repository: https://github.com/borisyankov/DefinitelyTyped
+- Website: http://definitelytyped.org/
+
+DefinitelyTyped is "The repository for high quality TypeScript type definitions."
+
+It is big repository on Github where people share and maintain TypeScript declarations for existing JavaScript libraries so they can get the benefit of compile-time static type checking. Currently there are close to 500 libraries modelled, and a few more land every day whenever a users creates one and shares it with the community.
+
+We have a team of 11 people, where most are active in reviewing and merging the constant stream pull requests. The contributions to the repository are big community effort, with about 1400 forks and 2200 stars. I joined this project when I adopted TSD, the previous author was one of the two repo owners of DefinitelyTyped and we decided to move TSD into the DefinitelyTyped Github organisation.
+
+DefinitelyTyped is now *the* go-to source for type information. Even some non-TypeScript projects are pulling our info, like various JavaScript enhancing libraries and the IntelliJ IDE's have a feed embedded. We are even linked from various official TypeScript websites and got recognition on the latest Microsoft Build conference, in two of the most important TypeScript presentations and various interviews.
+
+## Activities
+
+At this point I am most active in infra-structure work and moving the organisation forward. And of course every once in a while I do my bit in merging open definitions and fielding questions from our users. This takes a lot of time but it pays back in  a lot of experience in assessing JavaScript API's and their type representation.
+
+I'm one of the more vocal collaborators with the ideas so I also get involved with meta questions and future plans. My main contribution is of course the package manager, TSD, as described on it [own page](/projects/tsd.html).
+
+### Build tester
+
+I also improved the testing tool that runs on Travis-CI. It validates the types by running the TypeScript compiler (in node.js) on the definitions and their test/demo file. This used to run naïve in serial, and at 400 definitions it took over an hour to complete, until one day Travis started timing-out. I reworked the test-runner to run parallel on multiple cores, as Trarvis runs on massive 32 core hardware we hog 24 cores to finish the build under ten minutes.
+
+Then I went further and added a Git-diff script that checks what files are actually changed in a pull request (or merge), then resolves references and dependencies. This means most builds only need to run a few tests and finish in under a minute. Except if anything touches JQuery, so many libraries relate to it a changes creates a huge reference cascade that touches half the repos, but at 24 cores even that is done pretty quickly.
+
+
+### Website
+
+I felt a need for a fancy DefinitelyTyped website, after some proposals I went ahead and did a crash-course [docpad](http://docpad.org/) (static site generator) and hammered out a site in [semantic-ui](http://semantic-ui.com/) (front-end framework). It lives at [definitelytyped.org](http://definitelytyped.org).
+
+At this point it looks real enough the other org members are starting to get interested so we're expanding content and adding more pages.
+
+Because I'm not a natural designer I depend on the framework, but it was easy to get something good looking out there: with plenty of white-space and a good font you can go a long way.
+
+Docpad is a static site generator so I've also set it up to be re-build via Travis-CI, and use a bot-account to push the build to github-pages.
+
+
+### Badges
+
+[![TypeScript definitions on DefinitelyTyped](//definitelytyped.org/badges/standard.svg)](http://definitelytyped.org)
+
+Everyone likes some bling on his projects so I moved to start providing readme-badges. This is an ongoing sub-project as our github.io hosting doesn't support https, but we're working on getting a sponsor to donate a CDN service.
+
+
+### Webhooks & communication channel
+
+We're looking into adding some webhooks and a node.js webservice to automate features to go for the next-level. Using some modules from npm this is technically easy but we're not sure on the problems we try to solve, let alone the solution we need. But we have the technology so that will be build in the next months. On the shortlist is a [Gitter](https://gitter.im/) integration, but it is still open.
+
+
+### Other stuff
+
+Plenty of small side projects. For example I drive the vision and feedback on a yeoman generator a collaborator is building, it will generate boilerplate for the definitions.
+
+Then I look for people and projects who can make a JavaScript analyser that can generate typings from Javascript or JSDocs. And meanwhile I try to get the organisation to step up their game, for example by supporting [BountySource](https://www.bountysource.com/), writing guides for the site and do many other enhancements.
