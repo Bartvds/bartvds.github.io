@@ -1,0 +1,25 @@
+---
+layout: 'project'
+title: 'framebufferJS'
+---
+
+- https://github.com/Bartvds/framebufferJS/tree/browserified
+- https://rawgit.com/Bartvds/framebufferJS/browserified/demo/index.html
+
+This was a module I found on reddit and forked to have some fun because I hadn't done much display code for a while.
+
+It is a simple pixel renderer for low-res-style games (big-pixels), it was made for a 32x32 pixel game-jam.
+
+## TypedArray
+
+The original was terribly inefficient, using many canvas `fillRect()` and a ugly triple nested array model for the pixels.
+
+So I re-gutted the code to use a single continuous Buffer (with Uint8Array/Uint8ClampedArra views). Then recoded the drawing loop for a nice speed boost on smaller sizes.
+
+## WebGL
+
+Because it was still slow at full-screen on my big 1920x1200 monitor I did a crash course WebGL and added a simple 2D crispy upscaling renderer. The GL code and shader are probably the simplest ever, but GL is so alien I'm proud I hacked it together on tutorials.
+
+Because the pixel buffer is so tiny you can easily pump it to the GPU every frame, use as a texture and use nearest-neighbour sampling to fill fullscreen with sharp upscaled big-pixels. It caps at the 60hz of `requestAnimationFrame` with plenty of CPU headroom.
+
+Sadly the owner got intimidated when I pushed a browserified version and didn't merge all of it, but I had my fun. Maybe later I pursue it further.

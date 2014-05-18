@@ -1,71 +1,65 @@
 @import "vars.css.less";
 
-/* Fonts */
-@font-face {
-	font-family: SegoeUI;
-	src: local('Segoe UI'), local('Helvetica Neue');
-}
-
-@font-face {
-	font-family: SegoeUILight;
-	src: local('Segoe UI Light'), local('Segoe UI Semilight'), local('Segoe UI'), local('Helvetica Neue');
-	font-weight: 100;
-}
-
-@font-face {
-	font-family: SegoeUISemibold;
-	src: local('Segoe UI Semibold'), local('Segoe UI'), local('Helvetica Neue');
-	font-weight: 600;
-}
-
 html,
 body {
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
 	color: @color;
 	background: @background;
+	font-size: 0.90em;
+}
+html {
+	overflow-y: scroll;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	font-family: SegoeUISemibold, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif /*rtl:prepend:'Droid Arabic Kufi','Droid Sans', */;
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
 }
-
+h1 {
+	font-weight: 300;
+	line-height: 2em;
+}
 p,
 a,
 ul,
 .ui.grid,
 li {
-  font-family: SegoeUILight, 'Segoe UI Light', SegoeUI, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
 }
 
-/* text and headers */
-pre {
+blockquote {
+	margin-left: 4px;
+	padding-left: 1em;
+	border-left: 4px solid #777;
 }
 code {
-	background-color: lighten(@background, 5%);
-	border: 1px solid lighten(@background, 20%);
 	font-family: 'Courier New', 'source-code-pro', monospace;
-	vertical-align: middle;
-	display: inline-block;
-	margin: 0.05em 0.05em;
-	padding: 0.0em 0.25em;
-	font-size: 0.9em;
+	font-size: 1.05em;
+	padding: 1px 5px;
+	background-color: #efefef;
+	border: 1px solid #cfcfcf;
+	border-radius: 3px;
 }
-
 pre code {
 	display: block;
-	font-size: 14px;
-	margin: 0.25em;
-	padding: 0.5em 0.5em;
+	padding: 2px 6px;
+	margin-left: 2px;
+	margin-right: 2px;
+	font-size: 1em;
 }
+
 blockquote {
 
 }
 
 p {
 	margin: 1em 0em;
+}
+hr {
+	border-top-color: rgba(0, 0, 0, 0.8);
+	border-bottom-color: rgba(0, 0, 0, 0.8);
+	border-bottom-size: 1px;
+	border-bottom-style: solid;
 }
 
 /* links */
@@ -74,7 +68,7 @@ a, a:visited {
 	text-decoration: none;
 }
 
-a:active {
+a:hover, a:active {
 	color: saturate(@main, 110%);
 }
 
@@ -82,10 +76,12 @@ a:active {
 	float: left;
 	margin-right: 1em;
 }
+
 .toppest {
 	padding-top: 0em;
 	margin-top: 0em;
 }
+
 .nopad {
 	padding: 0em;
 	margin: 0em;
@@ -94,7 +90,10 @@ a:active {
 .outer {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 960px;
+	max-width: 900px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
+
 .centeroid {
 }

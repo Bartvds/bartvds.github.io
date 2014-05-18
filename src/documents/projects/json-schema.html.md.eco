@@ -1,0 +1,25 @@
+---
+layout: 'project'
+title: 'JSON-Schema'
+---
+
+- npm: https://www.npmjs.org/package/tv4
+- npm: https://www.npmjs.org/package/grunt-tv4
+- npm: https://www.npmjs.org/package/tv4-reporter
+- npm: https://www.npmjs.org/package/chai-json-schema
+
+As an ex-ActionScripter I miss runtime validation in JavaScript, so early in my first work on TSD I got involved in some JSON-Schema modules.
+
+## TV4
+
+At that point the best schema validator for JavaScript was the tv4 package, but the project itself was a very low-tech, with no clear reproducible build/test-script, concatenation running in PHP (!) and the tests themselves in a home-rolled script. I proposed moving it to Grunt and mocha, and on a big pull request the owner made me contributor with Github push access.
+
+I converted the whole test suite to mocha + chai (now proclaim), added grunt, a minifier, JSHint. Then setup the node.js and phantomJS tests, Travis-CI testing, readme badges, source-map-support, the whole thing that makes it testable and easily reproducible with a simple `npm install`. It paid off too, as it was now a lot easier for people to contribute when then can run the suite locally and pull requests get tested on Travis-CI.
+
+I don't have much code in the functional part of the module, just some usability/API stuff, but still keep an eye on it and do some infrastructure work. Recently I managed a user adding AMD (UMD) support with browser tests, easy to add when grunt was running phantomJS allready.
+
+## Dependents
+
+Grunt-tv4 is my own plugin that uses tv4 to validate values. There is a decent amount of code for a grunt-plugin, but it is quite capable and can load remote reference and bulk report errors in a fancy compact format using tv4-reporter.
+
+Chai-json-schema is a plugin for chai that adds assertions for JSON-Schema.

@@ -11,15 +11,24 @@ DefinitelyTyped is "The repository for high quality TypeScript type definitions.
 
 It is big repository on Github where people share and maintain TypeScript declarations for existing JavaScript libraries so they can get the benefit of compile-time static type checking. Currently there are close to 500 libraries modelled, and a few more land every day whenever a users creates one and shares it with the community.
 
+It is quite big and interesting project with many aspects so I'd outline the improtant stuff. I can easily fill pages describing what is going on. I type text easily, and there are blobs of text from me about DefinitelyTyped all over the internet, like on reddit, hackernews, codeplex and of course github issue tracker.
+
+
+## Team
+
 We have a team of 11 people, where most are active in reviewing and merging the constant stream pull requests. The contributions to the repository are big community effort, with about 1400 forks and 2200 stars. I joined this project when I adopted TSD, the previous author was one of the two repo owners of DefinitelyTyped and we decided to move TSD into the DefinitelyTyped Github organisation.
 
-DefinitelyTyped is now *the* go-to source for type information. Even some non-TypeScript projects are pulling our info, like various JavaScript enhancing libraries and the IntelliJ IDE's have a feed embedded. We are even linked from various official TypeScript websites and got recognition on the latest Microsoft Build conference, in two of the most important TypeScript presentations and various interviews.
+DefinitelyTyped is now *the* go-to source for type information. Even some non-TypeScript projects are pulling our info, like various JavaScript enhancing libraries, and the IntelliJ IDE's have a feed embedded. We are even linked from various official TypeScript websites and got recognition on the latest Microsoft Build conference, in two of the most important TypeScript presentations and various interviews.
+
 
 ## Activities
 
-At this point I am most active in infra-structure work and moving the organisation forward. And of course every once in a while I do my bit in merging open definitions and fielding questions from our users. This takes a lot of time but it pays back in  a lot of experience in assessing JavaScript API's and their type representation.
+At this point I am most active in infra-structure work and moving the organisation forward. And of course every once in a while I do my bit in merging open definitions and fielding questions from our users. This takes a lot of time but it pays back in a lot of experience in assessing JavaScript API's and their type representation.
 
-I'm one of the more vocal collaborators with the ideas so I also get involved with meta questions and future plans. My main contribution is of course the package manager, TSD, as described on it [own page](/projects/tsd.html).
+I'm one of the more vocal collaborators with the ideas so I also get involved with meta questions and future plans. Also I battle the noisy users: there is this phenomenon that every few weeks/months someone turns up with visions and crazy ideas, and I'd love to engage them. Some have good ideas too, some less so. But you got to be polite and accommodating when hosting  a community so it a good for experience.
+
+My main contribution is of course the package manager, TSD, as described on it [own page](/projects/tsd.html).
+
 
 ### Build tester
 
@@ -27,6 +36,7 @@ I also improved the testing tool that runs on Travis-CI. It validates the types 
 
 Then I went further and added a Git-diff script that checks what files are actually changed in a pull request (or merge), then resolves references and dependencies. This means most builds only need to run a few tests and finish in under a minute. Except if anything touches JQuery, so many libraries relate to it a changes creates a huge reference cascade that touches half the repos, but at 24 cores even that is done pretty quickly.
 
+There is a fair set up palns in the pipeline, sadly nobody has time to make it happen. But slowely we get there.
 
 ### Website
 
@@ -43,12 +53,12 @@ Docpad is a static site generator so I've also set it up to be re-build via Trav
 
 [![TypeScript definitions on DefinitelyTyped](//definitelytyped.org/badges/standard.svg)](http://definitelytyped.org)
 
-Everyone likes some bling on his projects so I moved to start providing readme-badges. This is an ongoing sub-project as our github.io hosting doesn't support https, but we're working on getting a sponsor to donate a CDN service.
+Everyone likes some bling on his projects so I moved to start providing readme-badges. This is an ongoing sub-project as our github.io hosting doesn't support https, but we're working on getting a sponsor for a CDN service.
 
 
 ### Webhooks & communication channel
 
-We're looking into adding some webhooks and a node.js webservice to automate features to go for the next-level. Using some modules from npm this is technically easy but we're not sure on the problems we try to solve, let alone the solution we need. But we have the technology so that will be build in the next months. On the shortlist is a [Gitter](https://gitter.im/) integration, but it is still open.
+I'm looking into adding some webhooks and a node.js webservice to automate features to go for the next level. Using some modules from npm this is technically easy but we're not sure on the problems we try to solve, let alone the solution we need. But we have the technology, it will be build in the next months. On the shortlist is a [Gitter](https://gitter.im/) integration, should be easy enough.
 
 
 ### Other stuff
