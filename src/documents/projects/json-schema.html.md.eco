@@ -6,10 +6,10 @@ description: 'Tools and collaboration'
 
 | | |
 |-|-|
-| npm | https://www.npmjs.org/package/tv4 |
-|   | https://www.npmjs.org/package/grunt-tv4 |
-|   | https://www.npmjs.org/package/tv4-reporter |
-|   | https://www.npmjs.org/package/chai-json-schema |
+| npm | [tv4](https://www.npmjs.org/package/tv4) |
+|     | [grunt-tv4](https://www.npmjs.org/package/grunt-tv4) |
+|     | [tv4-reporter](https://www.npmjs.org/package/tv4-reporter) |
+|     | [chai-json-schema](https://www.npmjs.org/package/chai-json-schema) |
 
 As an ex-ActionScripter I miss runtime validation in JavaScript (TypeScript), so I got involved in a JSON-Schema validator.
 
@@ -17,9 +17,7 @@ As an ex-ActionScripter I miss runtime validation in JavaScript (TypeScript), so
 
 At that point the best schema validator for JavaScript was the tv4 package. While the project itself was a very low-tech, with no clear reproducible build/test-script, concatenation running in PHP (!) and the tests themselves in a home-rolled script. I proposed moving it to Grunt and mocha, and on a big pull request the owner made me contributor with Github push access.
 
-I converted the whole test suite to mocha + chai (now proclaim), added grunt, a minifier, JSHint.
-
-Then created node.js and phantomJS tests, Travis-CI integration, readme badges, source-map-support. The whole shebang that makes it testable and easily reproducible with a simple `npm install`.
+I converted the whole test suite to mocha + chai (now proclaim), added grunt, a minifier, JSHint. Then created node.js and phantomJS tests, Travis-CI integration, readme badges, source-map-support. The whole shebang that makes it testable and easily reproducible with a simple `npm install`.
 
 It paid off too, as it was now a lot easier for people to contribute when then can run the suite locally, and pull requests get tested on Travis-CI. This expanded the feature-set and slowly grows the users on npm, bower and component-io.
 

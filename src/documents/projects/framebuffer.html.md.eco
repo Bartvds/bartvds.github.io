@@ -6,8 +6,8 @@ description: 'Pixel buffers for low-rez games'
 
 | | |
 |-|-|
-| code | https://github.com/Bartvds/framebufferJS/tree/browserified |
-| demo | https://rawgit.com/Bartvds/framebufferJS/browserified/demo/index.html |
+| code | [github/browserified](https://github.com/Bartvds/framebufferJS/tree/browserified) |
+| demo | [rawgit/index](https://rawgit.com/Bartvds/framebufferJS/browserified/demo/index.html) |
 
 This was a module I found on reddit and forked to have some fun because I hadn't done much display-code for a while.
 

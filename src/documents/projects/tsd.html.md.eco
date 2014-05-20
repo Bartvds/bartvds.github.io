@@ -7,10 +7,13 @@ prio: 1
 
 | | |
 |-|-|
-| github | https://github.com/DefinitelyTyped/tsd |
-| npm | https://www.npmjs.org/package/tsd |
-| www | http://www.tsdpm.com |
-| video | http://channel9.msdn.com/Events/Build/2014/3-583 (around ~22:52) |
+| npm | [tsd](https://www.npmjs.org/package/tsd) |
+| github | [DefinitelyTyped/tsd](https://github.com/DefinitelyTyped/tsd) |
+| www | [www.tsdpm.com](http://www.tsdpm.com)|
+| video | [channel9.msdn.com](http://channel9.msdn.com/Events/Build/2014/3-583) (around ~22:52) |
+| screenshot | [help.png]((https://raw.github.com/DefinitelyTyped/tsd/master/media/capture/help.png) |
+|   | [async.png](https://raw.github.com/DefinitelyTyped/tsd/master/media/capture/async.png) |
+|   | [angular.png](https://raw.github.com/DefinitelyTyped/tsd/master/media/capture/angular.png) |
 
 TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.
 

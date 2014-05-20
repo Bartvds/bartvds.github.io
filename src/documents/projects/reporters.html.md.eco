@@ -11,8 +11,10 @@ Usability is key in any toolchain and I was not happy with the reporters some mu
 
 | | |
 |-|-|
-| npm | https://www.npmjs.org/package/mocha-unfunk-reporter |
-|   | https://www.npmjs.org/package/unfunk-diff |
+| npm | [mocha-unfunk-reporter](https://www.npmjs.org/package/mocha-unfunk-reporter) |
+| npm | [unfunk-diff](https://www.npmjs.org/package/unfunk-diff) |
+| diff | [gallery](https://imgur.com/a/qQJQf/layout/blog) |
+| diff | [travis](https://travis-ci.org/Bartvds/unfunk-diff) |
 
 When using WebStorm on Windows the integrated terminal doesn't handle fancy ANSI escape codes and cursor controls very well.
 
@@ -25,9 +27,9 @@ It also has a custom string/object diff renderer. It uses existing string and ob
 
 | | |
 |-|-|
-| npm | https://www.npmjs.org/package/jshint-path-reporter |
-|   | https://www.npmjs.org/package/tslint-path-formatter |
-|   | https://www.npmjs.org/package/eslint-path-formatter |
+| npm | [jshint-path-reporter](https://www.npmjs.org/package/jshint-path-reporter) |
+|     | [tslint-path-formatter](https://www.npmjs.org/package/tslint-path-formatter) |
+|     | [eslint-path-formatter](https://www.npmjs.org/package/eslint-path-formatter) |
 
 Because linting code is important to keep quality high I use JSHint (and ESLint and TSLint too). I found out WebStorm has a feature that parses external-tool output and uses a RegExp to make paths+locations clickable (it is used for clickable stack-traces).
 
@@ -38,7 +40,7 @@ So there is a triplet of report formatters that facilitate this. Of course some 
 
 | | |
 |-|-|
-| npm | https://www.npmjs.org/package/grunt-todos |
+| npm | [grunt-todos](https://www.npmjs.org/package/grunt-todos) |
 
 This was an existing project used to report TODO's in code. I use it a lot but it had some bugs. The owner disappeared from the internet so I went through npm-support and got maintainer access on it so I could push fixes for the open issues.
 

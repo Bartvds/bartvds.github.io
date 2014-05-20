@@ -9,9 +9,9 @@ prio: 2
 
 | | |
 |-|-|
-| organisation | https://github.com/DefinitelyTyped |
-| repository | https://github.com/borisyankov/DefinitelyTyped |
-| website | http://definitelytyped.org |
+| website | [definitelytyped.or](http://definitelytyped.org) |
+| organisation | [DefinitelyTyped](https://github.com/DefinitelyTyped) |
+| repository | [borisyankov/DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped) |
 
 DefinitelyTyped is a repository on Github where people share and maintain TypeScript type definitions for existing JavaScript libraries so they can get the benefit of compile-time static type checking. Currently there are close to 500 libraries modelled, and a few more land every day whenever a users creates one and shares it with the community.
 
