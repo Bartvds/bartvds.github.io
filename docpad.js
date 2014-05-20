@@ -7,9 +7,10 @@ var docpadConfig = {
 	templateData: {
 		site: {
 			url: 'http://bartvds.github.io',
+			ref: 'bartvds.github.io',
 			github: 'https://github.com/bartvds/',
 			npm: 'https://www.npmjs.org/~bartvds',
-			ref: 'bartvds.github.io',
+			source: 'https://github.com/Bartvds/bartvds.github.io/',
 			home: '/',
 			gh: {
 				user: 'bartvds',

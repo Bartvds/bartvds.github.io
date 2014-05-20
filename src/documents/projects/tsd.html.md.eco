@@ -2,6 +2,7 @@
 layout: 'project'
 title: 'TSD'
 description: 'TypeScript type definition package manager'
+prio: 1
 ---
 
 | | |
@@ -11,13 +12,11 @@ description: 'TypeScript type definition package manager'
 | www | http://www.tsdpm.com |
 | video | http://channel9.msdn.com/Events/Build/2014/3-583 (around ~22:52) |
 
-
-
 TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.
 
 It is used mostly as a CLI tool, similar to npm or bower. The content is pulled from the Github API, with a lot of (http-)caching. Internally it is mostly Promise/A and a little streaming code.
 
-This is my big main project, my significant contribution to the community. My baby, nasty and horrible on the inside, beautiful and amazing on the outside.
+This is my main project; my significant contribution to the community. My baby, nasty and horrible on the inside, beautiful and amazing on the outside.
 
 
 ## Project

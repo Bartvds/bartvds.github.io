@@ -7,15 +7,15 @@ description: 'Tools and collaboration'
 | | |
 |-|-|
 | npm | https://www.npmjs.org/package/tv4 |
-| npm | https://www.npmjs.org/package/grunt-tv4 |
-| npm | https://www.npmjs.org/package/tv4-reporter |
-| npm | https://www.npmjs.org/package/chai-json-schema |
+|   | https://www.npmjs.org/package/grunt-tv4 |
+|   | https://www.npmjs.org/package/tv4-reporter |
+|   | https://www.npmjs.org/package/chai-json-schema |
 
-As an ex-ActionScripter I miss runtime validation in JavaScript (TypeScript), so early in my work on TSD I got involved in some JSON-Schema modules.
+As an ex-ActionScripter I miss runtime validation in JavaScript (TypeScript), so I got involved in a JSON-Schema validator.
 
 ## TV4
 
-At that point the best schema validator for JavaScript was the tv4 package, but the project itself was a very low-tech, with no clear reproducible build/test-script, concatenation running in PHP (!) and the tests themselves in a home-rolled script. I proposed moving it to Grunt and mocha, and on a big pull request the owner made me contributor with Github push access.
+At that point the best schema validator for JavaScript was the tv4 package. While the project itself was a very low-tech, with no clear reproducible build/test-script, concatenation running in PHP (!) and the tests themselves in a home-rolled script. I proposed moving it to Grunt and mocha, and on a big pull request the owner made me contributor with Github push access.
 
 I converted the whole test suite to mocha + chai (now proclaim), added grunt, a minifier, JSHint.
 

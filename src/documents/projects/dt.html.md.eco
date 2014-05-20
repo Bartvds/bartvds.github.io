@@ -2,15 +2,16 @@
 layout: 'project'
 title: 'DefinitelyTyped'
 description: 'The repository for high quality TypeScript type definitions'
+prio: 2
 ---
+
+> The repository for high quality TypeScript type definitions
 
 | | |
 |-|-|
 | organisation | https://github.com/DefinitelyTyped |
 | repository | https://github.com/borisyankov/DefinitelyTyped |
 | website | http://definitelytyped.org |
-
-> The repository for high quality TypeScript type definitions.
 
 DefinitelyTyped is a repository on Github where people share and maintain TypeScript type definitions for existing JavaScript libraries so they can get the benefit of compile-time static type checking. Currently there are close to 500 libraries modelled, and a few more land every day whenever a users creates one and shares it with the community.
 
@@ -19,7 +20,7 @@ It is an interesting project with many aspects so I'd outline the important part
 
 ## Team
 
-We have a team of 11 people, where most are active in reviewing and merging the constant stream pull requests. The contributions to the repository are big community effort, with about 1400 forks and 2200 stars. I joined this project when I adopted TSD, the previous author was one of the two repo owners of DefinitelyTyped and we decided to move TSD into the DefinitelyTyped Github organisation.
+We have a team of 11 people from all over the planet, where most are active in reviewing and merging the constant stream pull requests. The contributions to the repository are big community effort, with about 1400 forks and 2200 stars. I joined this project when I adopted TSD, the previous author was one of the two repo owners of DefinitelyTyped and we decided to move TSD into the DefinitelyTyped Github organisation.
 
 DefinitelyTyped is now *the* go-to source for type information. Even some non-TypeScript projects are pulling our info, like various JavaScript enhancing libraries, and the IntelliJ IDE's have a feed embedded. We are even linked from various official TypeScript websites and got recognition on the latest Microsoft Build conference, in two of the most important TypeScript presentations and various interviews.
 

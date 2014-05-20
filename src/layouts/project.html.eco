@@ -10,6 +10,15 @@ layout: default
 		<div class="column centeroid">
 			<%- @partial('header') %>
 
+			<div class="ui vertical basic segment">
+				<div class="ui text menu">
+					<% for item in @getCollection('projects').sortArray(prio: -1): %>
+					<a class="item" href="<%= item.url %>">
+						<%- item.title or item.name %></a>
+					<% end %>
+				</div>
+			</div>
+
 			<h1 class="ui header"><%- @document.title or @document.name %></h1>
 
 			<%- @content %>
