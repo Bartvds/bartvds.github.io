@@ -7,7 +7,7 @@ script:
 - grunt deploy
 branches:
   only:
-  - master
+  - source
 env:
   global:
     secure: I0XA+vTM9v9aHMCLzIw3aGmhPfvVsThY+MtysKFVbS8Q+kE9Ya1FnHYov5Lsm4htbgpT5n+XwX2KgJ84+eaDugiJ1weTb/SLVYldkP3PywZqNj18Hl2r9voHppICC788fJ33govCHO6Bq6JROhRuDamF+ZhBJbU1bfCWnXidLo8=
