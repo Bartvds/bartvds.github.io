@@ -1,24 +1,14 @@
 /* jshint -W014 */
+/* jshint -W098 */
 
-
-var hljs;
-function highlightCode(code, lang) {
-	if (!hljs) {
-		hljs = require('highlight.js');
-		hljs.configure({tabReplace: '    '}); // 4 spaces
-		hljs.registerLanguage('typescript', require('./lib/highlight/typescript'));
-	}
-	if (lang) {
-		return hljs.highlight(lang, code).value;
-	}
-	return hljs.highlightAuto(code).value;
-}
+var markedOpts = require('./lib/marked');
 
 var docpadConfig = {
 	templateData: {
 		site: {
 			url: 'http://bartvds.github.io',
-			github: 'https://github.com/bartvds/bartvds.github.io',
+			github: 'https://github.com/bartvds/',
+			npm: 'https://www.npmjs.org/~bartvds',
 			ref: 'bartvds.github.io',
 			home: '/',
 			gh: {
@@ -30,6 +20,7 @@ var docpadConfig = {
 			description: 'Content for Bart van der Schoor.',
 			keywords: 'bart van der schoor',
 			styles: [
+				'//fonts.googleapis.com/css?family=Open+Sans:400,700',
 				'/styles/semantic.min.css',
 				'/styles/style.css'
 			],
@@ -75,27 +66,10 @@ var docpadConfig = {
 	},
 	plugins: {
 		marked: {
-			markedOptions: {
-				gfm: true,
-				highlight: highlightCode
-			}
+			markedOptions: markedOpts
 		}
 	},
 	events: {
-		serverExtend: function(opts) {
-			var server = opts.server;
-			var docpad = this.docpad;
-			var latestConfig = docpad.getConfig();
-			var oldUrls = latestConfig.templateData.site.oldUrls || [];
-			var newUrl = latestConfig.templateData.site.url;
-			return server.use(function(req, res, next) {
-				if (oldUrls.indexOf(req.headers.host) >= 0) {
-					return res.redirect(newUrl + req.url, 301);
-				} else {
-					return next();
-				}
-			});
-		}
 	}
 };
 

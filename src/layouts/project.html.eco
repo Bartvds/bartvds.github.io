@@ -10,6 +10,8 @@ layout: default
 		<div class="column centeroid">
 			<%- @partial('header') %>
 
+			<h1 class="ui header"><%- @document.title or @document.name %></h1>
+
 			<%- @content %>
 
 			<%- @partial('footer') %>

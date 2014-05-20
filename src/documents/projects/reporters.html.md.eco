@@ -1,15 +1,18 @@
 ---
 layout: 'project'
 title: 'Reporters'
+description: 'Because every tool needs a fancy output'
 ---
 
-Usability is key in any toolchain and I was not happy with the reproters some much-used tools provided. Luckily many offer a API to add custom reporters so early in ym JavaScript coversion I created a bucnh of them
+Usability is key in any toolchain and I was not happy with the reporters some much-used tools provided. Luckily many offer a API to add custom reporters so early in my JavaScript conversion I created a bunch of reporters that work well in WebStorm.
 
 
 ## Mocha-unfunk-reporter
 
-- https://www.npmjs.org/package/mocha-unfunk-reporter
-- https://www.npmjs.org/package/unfunk-diff
+| | |
+|-|-|
+| npm | https://www.npmjs.org/package/mocha-unfunk-reporter |
+| npm | https://www.npmjs.org/package/unfunk-diff |
 
 I use WebStorm on Windows and it's integrated terminal doesn't handle fancy ANSI escape codes and cursor controls very well.
 
@@ -20,9 +23,11 @@ It also has a custom string/object diff renderer. It uses existing string and ob
 
 ## Linters
 
-- https://www.npmjs.org/package/jshint-path-reporter
-- https://www.npmjs.org/package/tslint-path-reporter
-- https://www.npmjs.org/package/eslint-path-formatter
+| | |
+|-|-|
+| npm | https://www.npmjs.org/package/jshint-path-reporter |
+| npm | https://www.npmjs.org/package/tslint-path-formatter |
+| npm | https://www.npmjs.org/package/eslint-path-formatter |
 
 Because linting code is important to keep quality high I use JSHint (and ESLint and TSLint too). I found out WebStorm has a feature that parses external-tool output and uses a RegExp to make paths+locations clickable (it is used for clickable stack-traces).
 
@@ -31,9 +36,11 @@ So there is a triplet of formatters that facilitate this. Of coruse some IDE's l
 
 ## Grunt-todos
 
-- https://www.npmjs.org/package/grunt-todos
+| | |
+|-|-|
+| npm | https://www.npmjs.org/package/grunt-todos |
 
-This was an exisitng project used to report TODO's in code. I use it a lot but it had some bugs. The owner disappeared from the internet so I went through npm-support and got maintainer access on it so I could push fixes for the open issues.
+This was an existing project used to report TODO's in code. I use it a lot but it had some bugs. The owner disappeared from the internet so I went through npm-support and got maintainer access on it so I could push fixes for the open issues.
 
 One of the bundled reporters does the clickable path thing I mentioned above, so you can navigate through the code by clinking in your console.
 

@@ -1,7 +1,7 @@
-<div class="ui menu">
+<div class="ui text menu">
 	<a class="item" href="<%= @site.home %>"><i class="home icon"></i> Home</a>
-	<a class="item" href="/projects.html"><i class="wrench icon"></i> Projects</a>
-	<a class="item" href="<%= @site.github %>"><i class="github icon"></i> Repository</a>
+	<a class="item" href="<%= @site.npm %>"><i class="wrench icon"></i> NPM</a>
+	<a class="item" href="<%= @site.github %>"><i class="github icon"></i> Github</a>
 <!--
 	<div class="right menu">
 		<div class="item">
@@ -12,9 +12,4 @@
 		</div>
 	</div>
 	-->
-</div>
-<div class="ui row">
-
-	<h1 class="ui header">Bartvds</h1>
-	<p><%- @site.tagline %></p>
 </div>

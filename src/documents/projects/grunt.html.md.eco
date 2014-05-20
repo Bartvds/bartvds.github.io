@@ -1,12 +1,22 @@
 ---
 layout: 'project'
-title: 'Grunt'
+title: 'Grunt plugins'
+description: 'Doing my bit to fill npm with grunting'
 ---
 
-- https://www.npmjs.org/~bartvds
+| | |
+|-|-|
+| npm | https://www.npmjs.org/~bartvds |
 
-I have a weak-spot for grunt, the task runner with its endless variation of plugins.
+I have a weak-spot for [Grunt](http://gruntjs.com), the task runner with its endless variation of plugins.
 
-I have a whole bunch of small plugins on npm. According to the npm stats people actually use them too. Strange enough the most simple ones get the most use, like grunt-execute. I'm not complaining though, it is very cool people find their use in such small things.
+So by now I have a whole bunch of small plugins on npm. According to the npm stats people actually use them too, which is a nice bonus.
 
-Hacking the plugins teaches you a lot about coding to solve specific problems and finding elegant options structures. And you get good at it too, I now regularly write one-off multi-tasks to solve problems in my projects.
+Strange enough the most simple ones get the most traffic, like grunt-execute. I'm not complaining though, it is very cool people find their use in such small things.
+
+Hacking the plugins teaches you a lot about coding to solve specific problems and finding elegant options structures. And you get fast at it too, I now regularly write one-off multi-tasks to solve problems in my projects.
+
+
+## Grunt-ts
+
+This is a TypeScript compiler for Grunt. It is not originally my own plugin but maintained by a fellow DefinitelyTyped organisation member. He made me co-owner and I occasionally expand some functionality and get involved in the discussions in the issues.

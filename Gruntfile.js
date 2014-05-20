@@ -4,8 +4,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-docs');
 	grunt.loadNpmTasks('grunt-gh-pages');
+
+	grunt.loadTasks('./tasks');
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -33,12 +34,12 @@ module.exports = function (grunt) {
 		'gh-pages': {
 			options: {
 				base: 'out',
-				branch: 'master',
+				branch: 'gh-pages',
 				repo: 'https://github.com/Bartvds/bartvds.github.io.git'
 			},
 			src: '**/*'
 		},
-		docs: {
+		docpad: {
 			options: require('./docpad'),
 			generate: {
 				action: 'generate'
@@ -64,18 +65,18 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('test', 'Build in development env and run tests.', [
 		'prep',
-		'docs:generate',
+		'docpad:generate',
 		// more
 	]);
 
 	grunt.registerTask('watch', 'Start watch and run LiveReload server on  development env.', [
 		'prep',
-		'docs:run',
+		'docpad:run',
 	]);
 
 	grunt.registerTask('build', 'Build with production env.', [
 		'prep',
-		'docs:publish',
+		'docpad:publish',
 		'copy:rootfiles'
 	]);
 

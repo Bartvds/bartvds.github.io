@@ -8,15 +8,40 @@ title: 'Home'
 		Home
 	</h2>
 
-	<p>Work &amp; projects for Bart van der Schoor</p>
+	<h3>Recent projects</h3>
 
 	<div class="ui row">
-		<ul class="ui list">
+		<table class="ui table">
 			<% for item in @getCollection('projects').sortArray(date: -1): %>
-			<a class="item" href="<%= item.url %>">
-				<i class="right triangle icon"></i> <%- item.title or item.name %></a>
-			<%- item.description %>
+			<tr><td><a href="<%= item.url %>">
+				<i class="right triangle icon"></i> <%- item.title or item.name %></a></td>
+			<td><%- item.description %></td></tr>
 			<% end %>
+		</table>
+	</div>
+
+	<h3>Demo's &amp; guides</h3>
+
+	<div class="ui row">
+		<a href="https://bartvds.github.io/demo-travis-gh-pages"><i class="right triangle icon"></i> demo-travis-gh-pages</a>
+		<p>Guide and a demo repository describing how to setup a simple continuous deployment to publish github pages using Travis-CI and Grunt.</p>
+	</div>
+
+	<div class="ui row">
+		<a href="https://bartvds.github.io/demo-travis-gh-pages"><i class="right triangle icon"></i> demo-travis-gh-pages</a>
+		<p>Guide and a demo repository describing how to setup a simple continuous deployment to publish github pages using Travis-CI and Grunt.</p>
+	</div>
+
+	<h3>Modules I <i class="ui icon heart"></i></h3>
+
+	<div class="ui row">
+		<p>I like picking through npm and github finding good modules, especially ones that are both fast and convenient.</p>
+	</div>
+	<div class="ui row">
+		<ul class="ui list">
+			<div class="ui item"><a href="https://www.npmjs.org/package/bluebird">bluebird</a> Promise/A with convenient wrappers and callback speeds</div>
+			<div class="ui item"><a href="https://www.npmjs.org/package/lazy.js">Lazy.js</a> Collection iteration like underscore, but lazily evaluated: makes loops go *fast*.</div>
+			<div class="ui item"><a href="https://www.npmjs.org/package/highland">bluebird</a> High-level streams library to makes streamings code accessible.</div>
 		</ul>
 	</div>
 </div>
