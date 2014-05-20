@@ -74,27 +74,26 @@
 <tbody>
 <tr>
 <td>npm</td>
-<td><a href="https://www.npmjs.org/package/tv4">https://www.npmjs.org/package/tv4</a></td>
+<td><a href="https://www.npmjs.org/package/tv4">tv4</a></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="https://www.npmjs.org/package/grunt-tv4">https://www.npmjs.org/package/grunt-tv4</a></td>
+<td><a href="https://www.npmjs.org/package/grunt-tv4">grunt-tv4</a></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="https://www.npmjs.org/package/tv4-reporter">https://www.npmjs.org/package/tv4-reporter</a></td>
+<td><a href="https://www.npmjs.org/package/tv4-reporter">tv4-reporter</a></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="https://www.npmjs.org/package/chai-json-schema">https://www.npmjs.org/package/chai-json-schema</a></td>
+<td><a href="https://www.npmjs.org/package/chai-json-schema">chai-json-schema</a></td>
 </tr>
 </tbody>
 </table>
 <p>As an ex-ActionScripter I miss runtime validation in JavaScript (TypeScript), so I got involved in a JSON-Schema validator.</p>
 <h2 id="tv4"  class="ui header">TV4</h2>
 <p>At that point the best schema validator for JavaScript was the tv4 package. While the project itself was a very low-tech, with no clear reproducible build/test-script, concatenation running in PHP (!) and the tests themselves in a home-rolled script. I proposed moving it to Grunt and mocha, and on a big pull request the owner made me contributor with Github push access.</p>
-<p>I converted the whole test suite to mocha + chai (now proclaim), added grunt, a minifier, JSHint.</p>
-<p>Then created node.js and phantomJS tests, Travis-CI integration, readme badges, source-map-support. The whole shebang that makes it testable and easily reproducible with a simple <code>npm install</code>.</p>
+<p>I converted the whole test suite to mocha + chai (now proclaim), added grunt, a minifier, JSHint. Then created node.js and phantomJS tests, Travis-CI integration, readme badges, source-map-support. The whole shebang that makes it testable and easily reproducible with a simple <code>npm install</code>.</p>
 <p>It paid off too, as it was now a lot easier for people to contribute when then can run the suite locally, and pull requests get tested on Travis-CI. This expanded the feature-set and slowly grows the users on npm, bower and component-io.</p>
 <p>I don&#39;t have much code in the functional part of the module, just some usability/API stuff, but still keep an eye on it and do some infrastructure work. Recently I managed a user adding AMD (UMD) support with browser tests, easy to add when grunt was running phantomJS already.</p>
 <h2 id="dependents"  class="ui header">Dependents</h2>
