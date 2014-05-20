@@ -8,6 +8,20 @@ module.exports = function (grunt) {
 
 	grunt.loadTasks('./tasks');
 
+	function getDeployMessage() {
+		var ret = '\n\n';
+		if (process.env.TRAVIS !== 'true') {
+			ret += 'did not run on travis-ci';
+			return ret;
+		}
+		ret += 'branch:       ' + process.env.TRAVIS_BRANCH + '\n';
+		ret += 'SHA:          ' + process.env.TRAVIS_COMMIT + '\n';
+		ret += 'range SHA:    ' + process.env.TRAVIS_COMMIT_RANGE + '\n';
+		ret += 'build id:     ' + process.env.TRAVIS_BUILD_ID + '\n';
+		ret += 'build number: ' + process.env.TRAVIS_BUILD_NUMBER + '\n';
+		return ret;
+	}
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		clean: {
@@ -34,10 +48,27 @@ module.exports = function (grunt) {
 		'gh-pages': {
 			options: {
 				base: 'out',
-				branch: 'gh-pages',
-				repo: 'https://github.com/Bartvds/bartvds.github.io.git'
+				branch: 'gh-pages'
 			},
-			src: '**/*'
+			publish: {
+				options: {
+					repo: 'https://github.com/Bartvds/bartvds.github.io.git',
+					message: 'publish (cli)'
+				},
+				src: ['**']
+			},
+			deploy: {
+				options: {
+					repo: 'https://' + process.env.GH_TOKEN + '@github.com/Bartvds/bartvds.github.io.git',
+					message: 'publish (auto)' + getDeployMessage(),
+					silent: true,
+					user: {
+						name: 'Bart van der Schoor',
+						email: 'bartvanderschoor@gmail.com'
+					}
+				},
+				src: ['**']
+			}
 		},
 		docpad: {
 			options: require('./docpad'),
@@ -53,6 +84,18 @@ module.exports = function (grunt) {
 			run: {
 				action: 'run'
 			}
+		}
+	});
+
+	grunt.registerTask('check-deploy', function() {
+		this.requires(['build']);
+
+		if (process.env.TRAVIS === 'true' && process.env.TRAVIS_SECURE_ENV_VARS === 'true' && process.env.TRAVIS_PULL_REQUEST === 'false') {
+			grunt.log.writeln('executing deployment');
+			grunt.task.run('gh-pages:deploy');
+		}
+		else {
+			grunt.log.writeln('skipping deployment');
 		}
 	});
 
@@ -80,10 +123,14 @@ module.exports = function (grunt) {
 		'copy:rootfiles'
 	]);
 
-	//
-	grunt.registerTask('publish', 'Build and push to master.', [
+	grunt.registerTask('publish', 'Build and push to master using CLI.', [
 		'build',
-		'gh-pages',
+		'gh-pages:publish'
+	]);
+
+	grunt.registerTask('deploy', 'Build with production env for bot.', [
+		'build',
+		'check-deploy'
 	]);
 
 	grunt.registerTask('default', ['build']);
