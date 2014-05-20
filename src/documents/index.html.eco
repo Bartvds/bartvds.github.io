@@ -5,7 +5,7 @@ title: 'Home'
 
 <div class="ui row">
 	<h2 class="header">
-		Home
+		Bart van der Schoor
 	</h2>
 
 	<h3>Recent projects</h3>
@@ -14,7 +14,7 @@ title: 'Home'
 		<table class="ui table">
 			<% for item in @getCollection('projects').sortArray(date: -1): %>
 			<tr><td><a href="<%= item.url %>">
-				<i class="right triangle icon"></i> <%- item.title or item.name %></a></td>
+				<%- item.title or item.name %></a></td>
 			<td><%- item.description %></td></tr>
 			<% end %>
 		</table>
@@ -24,12 +24,12 @@ title: 'Home'
 
 	<div class="ui row">
 		<a href="https://bartvds.github.io/demo-travis-gh-pages"><i class="right triangle icon"></i> demo-travis-gh-pages</a>
-		<p>Guide and a demo repository describing how to setup a simple continuous deployment to publish github pages using Travis-CI and Grunt.</p>
+		<p>Guide and a demo repository describing how to setup a simple continuous deployment to publish github.io-pages using Travis-CI and Grunt.</p>
 	</div>
 
 	<div class="ui row">
-		<a href="https://bartvds.github.io/demo-travis-gh-pages"><i class="right triangle icon"></i> demo-travis-gh-pages</a>
-		<p>Guide and a demo repository describing how to setup a simple continuous deployment to publish github pages using Travis-CI and Grunt.</p>
+		<a href="https://github.com/DefinitelyTyped/demo-typescript-node-minimal"><i class="right triangle icon"></i> demo-typescript-node-minimal</a>
+		<p>Minimal demo showing how to use TypeScript with node.js/npm modules .</p>
 	</div>
 
 	<h3>Modules I <i class="ui icon heart"></i></h3>
@@ -40,8 +40,9 @@ title: 'Home'
 	<div class="ui row">
 		<ul class="ui list">
 			<div class="ui item"><a href="https://www.npmjs.org/package/bluebird">bluebird</a> Promise/A with convenient wrappers and callback speeds</div>
-			<div class="ui item"><a href="https://www.npmjs.org/package/lazy.js">Lazy.js</a> Collection iteration like underscore, but lazily evaluated: makes loops go *fast*.</div>
-			<div class="ui item"><a href="https://www.npmjs.org/package/highland">bluebird</a> High-level streams library to makes streamings code accessible.</div>
+			<div class="ui item"><a href="https://www.npmjs.org/package/lazy.js">lazy.js</a> Collection iteration like underscore, but lazily evaluated; makes functional code go *fast*.</div>
+			<div class="ui item"><a href="https://www.npmjs.org/package/highland">highland</a> High-level streams library makes streaming easy as pie.</div>
+			<div class="ui item"><a href="https://www.npmjs.org/package/joi">joi</a> High-level streams library to makes streamings code accessible.</div>
 		</ul>
 	</div>
 </div>

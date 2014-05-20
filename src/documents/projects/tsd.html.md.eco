@@ -12,18 +12,21 @@ description: 'TypeScript type definition package manager'
 | video | http://channel9.msdn.com/Events/Build/2014/3-583 (around ~22:52) |
 
 
-This is my big project, my main contribution to the community. My baby, nasty and horrible on the inside, beautiful and amazing on the outside.
 
 TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.
 
 It is used mostly as a CLI tool, similar to npm or bower. The content is pulled from the Github API, with a lot of (http-)caching. Internally it is mostly Promise/A and a little streaming code.
 
+This is my big main project, my significant contribution to the community. My baby, nasty and horrible on the inside, beautiful and amazing on the outside.
+
 
 ## Project
 
-This was my first big project in TypeScript, and also my biggest project on npm. Current release version has a fair amount of users for something as niche as this; it has Google Analytics integrated and that shows a steady 100-200 significant actions per day, with peaks around 300. On npm I see daily install rate of about 50-100. It is not quite bower-level but then many TypeScript definitions are installed via NuGet or pulled directly from the repository.
+The first version was my first big project in TypeScript, and also my biggest project on npm. Current release version has a fair amount of users for something as niche as this; it has Google Analytics integrated and that shows a steady 100-200 significant actions per day, with peaks around 300. On npm I see daily install rate of about 50-100. It is not quite bower-level but then many TypeScript definitions are installed via NuGet or pulled directly from the repository.
 
 I adopted this project from the previous owner who lacked time to take it further. His last version used a huge manually updated JSON file and was very much C#-inspired, heavy OO style. I rewrote it on the Github API in what looks like my old ActionScript 3 code pattern. By talking to Github directly it is always up-2-date.
+
+It has support for OAuth to boost the rate-limit, proxy support and some other hardening. The http-layer uses cache headers and gzip, and is stored on disk by hashing the significant http parameters (url, headers etc).
 
 
 ## Site
