@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Reporters | Bartvds</title>
+	<meta name="description" content="Because every tool needs fancy output" />
+	<meta name="keywords" content="bart van der schoor" />
+
+	<meta name="generator" content="DocPad v6.65.0" />
+	<link  rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700" /><link  rel="stylesheet" href="/styles/semantic.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+
+	<link rel="shortcut icon" href="/favicon.ico" >
+</head>
+<body class="ui">
+	<div class="outer">
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="ui one column grid">
+		<div class="column centeroid">
+			<div class="ui text menu">
+	<a class="item" href="/"><i class="home icon"></i> Home</a>
+	<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
+	<a class="item" href="https://github.com/bartvds/"><i class="github icon"></i> Github</a>
+<!--
+	<div class="right menu">
+		<div class="item">
+			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=watch&count=true"
+					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=fork&count=true"
+					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+		</div>
+	</div>
+	-->
+</div>
+
+
+			<h1 class="ui header">Reporters</h1>
+
+			<p>Usability is key in any toolchain and I was not happy with the reporters some much-used tools provided. Luckily many offer a API to add custom reporters so early in my JavaScript conversion I created a bunch of reporters that work well in WebStorm.</p>
+<h2 id="mocha-unfunk-reporter"  class="ui header">Mocha-unfunk-reporter</h2>
+<table class="ui basic collapsing table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>npm</td>
+<td><a href="https://www.npmjs.org/package/mocha-unfunk-reporter">https://www.npmjs.org/package/mocha-unfunk-reporter</a></td>
+</tr>
+<tr>
+<td>npm</td>
+<td><a href="https://www.npmjs.org/package/unfunk-diff">https://www.npmjs.org/package/unfunk-diff</a></td>
+</tr>
+</tbody>
+</table>
+<p>I use WebStorm on Windows and it&#39;s integrated terminal doesn&#39;t handle fancy ANSI escape codes and cursor controls very well.</p>
+<p>This was especially noticeable in mocha testing. So my first-ever npm module was a mocha reporter without console funkyness. Just plain console.log() and some optional ANSI colors.</p>
+<p>It also has a custom string/object diff renderer. It uses existing string and object diff modules but formats the output in way that works both with-or-without color support, and can diff strings nested in objects. It looks a bit odd at first-sight but it works pretty good once you get used to it.</p>
+<h2 id="linters"  class="ui header">Linters</h2>
+<table class="ui basic collapsing table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>npm</td>
+<td><a href="https://www.npmjs.org/package/jshint-path-reporter">https://www.npmjs.org/package/jshint-path-reporter</a></td>
+</tr>
+<tr>
+<td>npm</td>
+<td><a href="https://www.npmjs.org/package/tslint-path-formatter">https://www.npmjs.org/package/tslint-path-formatter</a></td>
+</tr>
+<tr>
+<td>npm</td>
+<td><a href="https://www.npmjs.org/package/eslint-path-formatter">https://www.npmjs.org/package/eslint-path-formatter</a></td>
+</tr>
+</tbody>
+</table>
+<p>Because linting code is important to keep quality high I use JSHint (and ESLint and TSLint too). I found out WebStorm has a feature that parses external-tool output and uses a RegExp to make paths+locations clickable (it is used for clickable stack-traces).</p>
+<p>So there is a triplet of formatters that facilitate this. Of coruse some IDE&#39;s like WebStorm have built-in support for linters, but not all of them. And these don&#39;t work on CI like Travis or AppVeyor. My reporters work great in a gruntfile as they are not dependent on anything external.</p>
+<h2 id="grunt-todos"  class="ui header">Grunt-todos</h2>
+<table class="ui basic collapsing table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>npm</td>
+<td><a href="https://www.npmjs.org/package/grunt-todos">https://www.npmjs.org/package/grunt-todos</a></td>
+</tr>
+</tbody>
+</table>
+<p>This was an existing project used to report TODO&#39;s in code. I use it a lot but it had some bugs. The owner disappeared from the internet so I went through npm-support and got maintainer access on it so I could push fixes for the open issues.</p>
+<p>One of the bundled reporters does the clickable path thing I mentioned above, so you can navigate through the code by clinking in your console.</p>
+
+
+			<div class="ui horizontal icon divider">
+	<i class="unhide icon"></i>
+</div>
+
+<div class="ui center aligned one column grid">
+	<div class="row">
+		<div class="column">
+			<a href="/">Home</a>
+			- <a href="https://github.com/bartvds/">Github</a>
+			- <a href="https://www.npmjs.org/~bartvds">npm</a>
+		</div>
+	</div>
+</div>
+
+		</div>
+	</div>
+</div>
+	<script defer="defer"  src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><script defer="defer"  src="/scripts/semantic.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-9726051-3', 'bartvds.github.io');
+	ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

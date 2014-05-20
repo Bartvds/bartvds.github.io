@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>framebufferJS | Bartvds</title>
+	<meta name="description" content="Pixel buffers for low-rez games" />
+	<meta name="keywords" content="bart van der schoor" />
+
+	<meta name="generator" content="DocPad v6.65.0" />
+	<link  rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700" /><link  rel="stylesheet" href="/styles/semantic.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+
+	<link rel="shortcut icon" href="/favicon.ico" >
+</head>
+<body class="ui">
+	<div class="outer">
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="ui one column grid">
+		<div class="column centeroid">
+			<div class="ui text menu">
+	<a class="item" href="/"><i class="home icon"></i> Home</a>
+	<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
+	<a class="item" href="https://github.com/bartvds/"><i class="github icon"></i> Github</a>
+<!--
+	<div class="right menu">
+		<div class="item">
+			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=watch&count=true"
+					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=fork&count=true"
+					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+		</div>
+	</div>
+	-->
+</div>
+
+
+			<h1 class="ui header">framebufferJS</h1>
+
+			| | |
+|-|-|
+| code | https://github.com/Bartvds/framebufferJS/tree/browserified |
+| demo | https://rawgit.com/Bartvds/framebufferJS/browserified/demo/index.html |
+
+This was a module I found on reddit and forked to have some fun because I hadn't done much display-code for a while.
+
+It is a simple pixel renderer for low-res-style games (big-pixels), it was made for a 32x32 pixel game-jam.
+
+
+## TypedArray
+
+The original was terribly inefficient, using canvas `fillRect()` and a ugly triple-nested array model for the pixels.
+
+So I re-gutted the whole thing to use a single continuous ArrayBuffer (with Uint8Array/Uint8ClampedArray views). Then recoded the drawing loop for a nice speed boost on smaller sizes.
+
+Note I didn't touch the loops in the code (*yet*), as I intended to get this merged I'd left that for the owner. If I had my way with those I'd flip the loops for cache-coherency (y as outer loop) and pull all conditionals out and maybe even fold them into a single loop.
+
+
+## WebGL
+
+Because it was still slow at full-screen on my big 1920x1200 monitor I did a crash course WebGL and added a simple 2D crispy-upscaling renderer. The GL code and shader are probably the simplest ever, but GL is so alien I'm proud I hacked it together on tutorials.
+
+As the pixel buffer is tiny Uint8Array we can easily pump it to the GPU every frame, an use it as a texture with nearest-neighbour sampling to fill fullscreen with big sharp pixels. It caps at the 60hz of `requestAnimationFrame` with plenty of CPU headroom.
+
+Sadly the owner got intimidated when I pushed a browserified version and so he didn't merge all of it, but I had my fun. Maybe later I pursue it further or convert it to TypeScript. MIT licence is awesome like that.
+
+			<div class="ui horizontal icon divider">
+	<i class="unhide icon"></i>
+</div>
+
+<div class="ui center aligned one column grid">
+	<div class="row">
+		<div class="column">
+			<a href="/">Home</a>
+			- <a href="https://github.com/bartvds/">Github</a>
+			- <a href="https://www.npmjs.org/~bartvds">npm</a>
+		</div>
+	</div>
+</div>
+
+		</div>
+	</div>
+</div>
+	<script defer="defer"  src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><script defer="defer"  src="/scripts/semantic.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-9726051-3', 'bartvds.github.io');
+	ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

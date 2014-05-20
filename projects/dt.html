@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>DefinitelyTyped | Bartvds</title>
+	<meta name="description" content="The repository for high quality TypeScript type definitions" />
+	<meta name="keywords" content="bart van der schoor" />
+
+	<meta name="generator" content="DocPad v6.65.0" />
+	<link  rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700" /><link  rel="stylesheet" href="/styles/semantic.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+
+	<link rel="shortcut icon" href="/favicon.ico" >
+</head>
+<body class="ui">
+	<div class="outer">
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="ui one column grid">
+		<div class="column centeroid">
+			<div class="ui text menu">
+	<a class="item" href="/"><i class="home icon"></i> Home</a>
+	<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
+	<a class="item" href="https://github.com/bartvds/"><i class="github icon"></i> Github</a>
+<!--
+	<div class="right menu">
+		<div class="item">
+			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=watch&count=true"
+					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=fork&count=true"
+					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+		</div>
+	</div>
+	-->
+</div>
+
+
+			<h1 class="ui header">DefinitelyTyped</h1>
+
+			<table class="ui basic collapsing table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>organisation</td>
+<td><a href="https://github.com/DefinitelyTyped">https://github.com/DefinitelyTyped</a></td>
+</tr>
+<tr>
+<td>repository</td>
+<td><a href="https://github.com/borisyankov/DefinitelyTyped">https://github.com/borisyankov/DefinitelyTyped</a></td>
+</tr>
+<tr>
+<td>website</td>
+<td><a href="http://definitelytyped.org">http://definitelytyped.org</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The repository for high quality TypeScript type definitions.</p>
+</blockquote>
+<p>DefinitelyTyped is a repository on Github where people share and maintain TypeScript type definitions for existing JavaScript libraries so they can get the benefit of compile-time static type checking. Currently there are close to 500 libraries modelled, and a few more land every day whenever a users creates one and shares it with the community.</p>
+<p>It is an interesting project with many aspects so I&#39;d outline the important parts. I can easily fill many pages describing what is going on. Because I generate text easily there are blobs of text from me about DefinitelyTyped all over the internet, like on reddit, hackernews, codeplex and of course github issue tracker.</p>
+<h2 id="team"  class="ui header">Team</h2>
+<p>We have a team of 11 people, where most are active in reviewing and merging the constant stream pull requests. The contributions to the repository are big community effort, with about 1400 forks and 2200 stars. I joined this project when I adopted TSD, the previous author was one of the two repo owners of DefinitelyTyped and we decided to move TSD into the DefinitelyTyped Github organisation.</p>
+<p>DefinitelyTyped is now <em>the</em> go-to source for type information. Even some non-TypeScript projects are pulling our info, like various JavaScript enhancing libraries, and the IntelliJ IDE&#39;s have a feed embedded. We are even linked from various official TypeScript websites and got recognition on the latest Microsoft Build conference, in two of the most important TypeScript presentations and various interviews.</p>
+<h2 id="activities"  class="ui header">Activities</h2>
+<p>At this point I am most active in infra-structure work and moving the organisation forward. And of course every once in a while I do my bit in merging open definitions and fielding questions from our users. This takes a lot of time but it pays back in a lot of experience in assessing JavaScript API&#39;s and their type representation.</p>
+<p>I&#39;m one of the more vocal collaborators with the ideas so I also get involved with meta questions and future plans. Also I battle the noisy users: there is this phenomenon that every few weeks/months someone turns up with visions and crazy ideas, and I&#39;d love to engage them. Some have good ideas too, some less so. But you got to be polite and accommodating when hosting  a community so it a good for experience.</p>
+<p>My main contribution is of course the package manager, TSD, as described on it <a href="/projects/tsd.html">own page</a>.</p>
+<h3 id="build-tester"  class="ui header">Build tester</h3>
+<p>I also improved the testing tool that runs on Travis-CI. It validates the types by running the TypeScript compiler (in node.js) on the definitions and their test/demo file. This used to run naïve in serial, and at 400 definitions it took over an hour to complete, until one day Travis started timing-out. I reworked the test-runner to run parallel on multiple cores, as Trarvis runs on massive 32 core hardware we hog 24 cores to finish the build under ten minutes.</p>
+<p>Then I went further and added a Git-diff script that checks what files are actually changed in a pull request (or merge), then resolves references and dependencies. This means most builds only need to run a few tests and finish in under a minute. Except if anything touches JQuery, so many libraries relate to it a changes creates a huge reference cascade that touches half the repos, but at 24 cores even that is done pretty quickly.</p>
+<p>There is a fair set up palns in the pipeline, sadly nobody has time to make it happen. But slowly we get there.</p>
+<h3 id="website"  class="ui header">Website</h3>
+<p>I felt a need for a fancy DefinitelyTyped website, after some proposals I went ahead and did a crash-course <a href="http://docpad.org/">docpad</a> (static site generator) and hammered out a site in <a href="http://semantic-ui.com/">semantic-ui</a>. It lives at <a href="http://definitelytyped.org">definitelytyped.org</a>.</p>
+<p>At this point it looks real enough the other org members are starting to get interested so we&#39;re expanding content and adding more pages.</p>
+<p>Because I&#39;m not a natural designer I depend on the framework, but it was easy to get something good looking out there: with plenty of white-space and a good font you can go a long way.</p>
+<p>Docpad is a static site generator so I&#39;ve also set it up to be re-build via Travis-CI, and use a bot-account to push the build to github-pages.</p>
+<h3 id="badges"  class="ui header">Badges</h3>
+<p><a href="http://definitelytyped.org"><img src="//definitelytyped.org/badges/standard.svg" alt="TypeScript definitions on DefinitelyTyped"></a></p>
+<p>Everyone likes some bling on his projects so I moved to start providing readme-badges. This is an ongoing sub-project as our github.io hosting doesn&#39;t support https, but we&#39;re working on getting a sponsor for a CDN service.</p>
+<h3 id="webhooks-communication-channel"  class="ui header">Webhooks &amp; communication channel</h3>
+<p>I&#39;m looking into adding some webhooks and a node.js webservice to automate features and go for the next level. Using some modules from npm this is technically easy but we&#39;re not sure off the problems we try to solve, let alone the solution we need. But we have the technology, it will be build in the next months. On the shortlist is a <a href="https://gitter.im/">Gitter</a> integration, should be easy enough.</p>
+<h3 id="other-stuff"  class="ui header">Other stuff</h3>
+<p>Plenty of small side projects. For example I drive the vision and feedback on a yeoman generator a collaborator is building, it will generate boilerplate for the definitions.</p>
+<p>And I scout for people and projects who can make a JavaScript analyser that can generate typings from Javascript or JSDocs. Meanwhile I try to get the organisation to step up their game, for example by supporting <a href="https://www.bountysource.com/">BountySource</a>, writing guides for the site and do many other enhancements.</p>
+
+
+			<div class="ui horizontal icon divider">
+	<i class="unhide icon"></i>
+</div>
+
+<div class="ui center aligned one column grid">
+	<div class="row">
+		<div class="column">
+			<a href="/">Home</a>
+			- <a href="https://github.com/bartvds/">Github</a>
+			- <a href="https://www.npmjs.org/~bartvds">npm</a>
+		</div>
+	</div>
+</div>
+
+		</div>
+	</div>
+</div>
+	<script defer="defer"  src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><script defer="defer"  src="/scripts/semantic.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-9726051-3', 'bartvds.github.io');
+	ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
