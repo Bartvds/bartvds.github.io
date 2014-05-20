@@ -16,9 +16,9 @@ It is a simple pixel renderer for low-res-style games (big-pixels), it was made 
 
 ## TypedArray
 
-The original was terribly inefficient, using canvas `fillRect()` and a ugly triple nested array model for the pixels.
+The original was terribly inefficient, using canvas `fillRect()` and a ugly triple-nested array model for the pixels.
 
-So I re-gutted the code to use a single continuous ArrayBuffer (with Uint8Array/Uint8ClampedArra views). Then recoded the drawing loop for a nice speed boost on smaller sizes.
+So I re-gutted the whole thing to use a single continuous ArrayBuffer (with Uint8Array/Uint8ClampedArray views). Then recoded the drawing loop for a nice speed boost on smaller sizes.
 
 Note I didn't touch the loops in the code (*yet*), as I intended to get this merged I'd left that for the owner. If I had my way with those I'd flip the loops for cache-coherency (y as outer loop) and pull all conditionals out and maybe even fold them into a single loop.
 
@@ -29,4 +29,5 @@ Because it was still slow at full-screen on my big 1920x1200 monitor I did a cra
 
 As the pixel buffer is tiny Uint8Array we can easily pump it to the GPU every frame, an use it as a texture with nearest-neighbour sampling to fill fullscreen with big sharp pixels. It caps at the 60hz of `requestAnimationFrame` with plenty of CPU headroom.
 
-Sadly the owner got intimidated when I pushed a browserified version and didn't merge all of it, but I had my fun. Maybe later I pursue it further, or convert it to TypeScript. MIT licence is awesome like that.
+Sadly the owner got intimidated when I pushed a browserified version and so he didn't merge all of it, but I had my fun. Maybe later I pursue it further or convert it to TypeScript. MIT licence is awesome like that.
+

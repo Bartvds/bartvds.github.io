@@ -39,7 +39,7 @@ I also improved the testing tool that runs on Travis-CI. It validates the types 
 
 Then I went further and added a Git-diff script that checks what files are actually changed in a pull request (or merge), then resolves references and dependencies. This means most builds only need to run a few tests and finish in under a minute. Except if anything touches JQuery, so many libraries relate to it a changes creates a huge reference cascade that touches half the repos, but at 24 cores even that is done pretty quickly.
 
-There is a fair set up palns in the pipeline, sadly nobody has time to make it happen. But slowely we get there.
+There is a fair set up palns in the pipeline, sadly nobody has time to make it happen. But slowly we get there.
 
 
 ### Website

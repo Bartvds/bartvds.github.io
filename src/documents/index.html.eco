@@ -7,11 +7,17 @@ title: 'Home'
 	<h2 class="header">
 		Bart van der Schoor
 	</h2>
-
+	<table class="ui basic collapsing table segment">
+		<tr>
+			<td>github</td><td><a href="https://github.com/bartvds">github.com/bartvds</a></td>
+		</tr><tr>
+			<td>npm</td><td><a href="https://www.npmjs.org/~bartvds">www.npmjs.org/~bartvds</a></td>
+		</tr>
+	</table>
 	<h3>Recent projects</h3>
 
 	<div class="ui row">
-		<table class="ui table">
+		<table class="ui basic collapsing table segment">
 			<% for item in @getCollection('projects').sortArray(date: -1): %>
 			<tr><td><a href="<%= item.url %>">
 				<%- item.title or item.name %></a></td>
@@ -24,7 +30,7 @@ title: 'Home'
 
 	<div class="ui row">
 		<a href="https://bartvds.github.io/demo-travis-gh-pages"><i class="right triangle icon"></i> demo-travis-gh-pages</a>
-		<p>Guide and a demo repository describing how to setup a simple continuous deployment to publish github.io-pages using Travis-CI and Grunt.</p>
+		<p>Guide and demo repository describing how to setup a simple continuous deployment to publish github.io-pages using Travis-CI and Grunt.</p>
 	</div>
 
 	<div class="ui row">

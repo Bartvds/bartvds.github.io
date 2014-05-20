@@ -1,7 +1,7 @@
 ---
 layout: 'project'
 title: 'Reporters'
-description: 'Because every tool needs a fancy output'
+description: 'Because every tool needs fancy output'
 ---
 
 Usability is key in any toolchain and I was not happy with the reporters some much-used tools provided. Luckily many offer a API to add custom reporters so early in my JavaScript conversion I created a bunch of reporters that work well in WebStorm.
