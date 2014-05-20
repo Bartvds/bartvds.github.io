@@ -25,38 +25,36 @@
 
 	<div class="ui one column grid">
 		<div class="column centeroid">
-			<div class="ui text menu">
-	<a class="item" href="/"><i class="home icon"></i> Home</a>
-	<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
-	<a class="item" href="https://github.com/bartvds/"><i class="github icon"></i> Github</a>
-<!--
-	<div class="right menu">
-		<div class="item">
-			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=watch&count=true"
-					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=fork&count=true"
-					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-		</div>
+			<div class="ui vertical segment">
+	<div class="ui text menu ">
+		<a class="item" href="/"><i class="home icon"></i> Home</a>
+		<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
+		<a class="item" href="https://github.com/bartvds/"><i class="sitemap icon"></i> Github</a>
+		<a class="item" href="https://github.com/Bartvds/bartvds.github.io/"><i class="github icon"></i> Source</a>
 	</div>
-	-->
 </div>
 
 
 			<div class="ui row">
-	<h2 class="header">
+	<h1 class="header">
 		Bart van der Schoor
-	</h2>
-	<table class="ui basic collapsing table segment">
+	</h1>
+	<img class="ui small rounded left floated image" src="https://avatars3.githubusercontent.com/u/685984?s=460" />
+	<table class="ui basic compact collapsing table segment">
 		<tr>
 			<td>github</td><td><a href="https://github.com/bartvds">github.com/bartvds</a></td>
-		</tr><tr>
+		</tr>
+		<tr>
 			<td>npm</td><td><a href="https://www.npmjs.org/~bartvds">www.npmjs.org/~bartvds</a></td>
 		</tr>
+		<tr>
+			<td>email</td><td><a href="mailto://bartvanderschoor@gmail.com?subject=please%20work%20for%20us">bartvanderschoor@gmail.com</a></td>
+		</tr>
 	</table>
-	<h3>Recent projects</h3>
 
+	<h2>Interesting projects</h2>
 	<div class="ui row">
-		<table class="ui basic collapsing table segment">
+		<table class="ui basic compact collapsing table segment">
 			
 			<tr><td><a href="/projects/dt.html">
 				DefinitelyTyped</a></td>
@@ -74,8 +72,12 @@
 				JSON-Schema</a></td>
 			<td>Tools and collaboration</td></tr>
 			
+			<tr><td><a href="/projects/older.html">
+				older work</a></td>
+			<td>Projects from another time</td></tr>
+			
 			<tr><td><a href="/projects/reporters.html">
-				Reporters</a></td>
+				reporters</a></td>
 			<td>Because every tool needs fancy output</td></tr>
 			
 			<tr><td><a href="/projects/tsd.html">
@@ -85,32 +87,38 @@
 		</table>
 	</div>
 
-	<h3>Demo's &amp; guides</h3>
+	<h2>Demos</h2>
 
 	<div class="ui row">
-		<a href="https://bartvds.github.io/demo-travis-gh-pages"><i class="right triangle icon"></i> demo-travis-gh-pages</a>
-		<p>Guide and demo repository describing how to setup a simple continuous deployment to publish github.io-pages using Travis-CI and Grunt.</p>
+		<i class="right triangle icon"></i> <a href="https://bartvds.github.io/demo-travis-gh-pages">demo-travis-gh-pages</a>
+		<p>Demo repository on how to setup a simple continuous deployment to publish github.io-pages using Travis-CI and Grunt.</p>
 	</div>
 
 	<div class="ui row">
-		<a href="https://github.com/DefinitelyTyped/demo-typescript-node-minimal"><i class="right triangle icon"></i> demo-typescript-node-minimal</a>
+		<i class="right triangle icon"></i> <a href="https://github.com/DefinitelyTyped/demo-typescript-node-minimal">demo-typescript-node-minimal</a>
 		<p>Minimal demo showing how to use TypeScript with node.js/npm modules .</p>
 	</div>
 
-	<h3>Modules I <i class="ui icon heart"></i></h3>
+	<h2>Modules I <i class="ui icon heart"></i></h2>
 
 	<div class="ui row">
-		<p>I like picking through npm and github finding good modules, especially ones that are both fast and convenient.</p>
+		<p>I like picking through npm and github finding great modules, especially ones that feel empowering and make code fly.</p>
 	</div>
 	<div class="ui row">
-		<ul class="ui list">
-			<div class="ui item"><a href="https://www.npmjs.org/package/bluebird">bluebird</a> Promise/A with convenient wrappers and callback speeds</div>
-			<div class="ui item"><a href="https://www.npmjs.org/package/lazy.js">lazy.js</a> Collection iteration like underscore, but lazily evaluated; makes functional code go *fast*.</div>
-			<div class="ui item"><a href="https://www.npmjs.org/package/highland">highland</a> High-level streams library makes streaming easy as pie.</div>
-			<div class="ui item"><a href="https://www.npmjs.org/package/joi">joi</a> Advanced object validation with convenient API.</div>
-			<div class="ui item"><a href="https://www.npmjs.org/package/parsimmon">parsimmon</a> A monadic LL(infinity) parser combinator library (*booya*).</div>
-			<div class="ui item"><a href="https://www.npmjs.org/package/mocha">mocha</a> Still stands undefeated as most convenient testing framework.</div>
-		</ul>
+		<table class="ui basic compact collapsing table segment">
+			<tr><td><a href="https://www.npmjs.org/package/bluebird">bluebird</a></td>
+				<td>Promise/A with convenient wrappers at callback speeds</td></tr>
+			<tr><td><a href="https://www.npmjs.org/package/lazy.js">lazy.js</a></td>
+				<td>Iteration like underscore, but lazily evaluated; high-speed functional chaining.</td></tr>
+			<tr><td><a href="https://www.npmjs.org/package/highland">highland</a></td>
+				<td>High-level streams library makes streaming easy as pie.</td></tr>
+			<tr><td><a href="https://www.npmjs.org/package/joi">joi</a></td>
+				<td>Advanced object-schema validation with convenient API.</td></tr>
+			<tr><td><a href="https://www.npmjs.org/package/parsimmon">parsimmon</a></td>
+				<td>A monadic LL(infinity) parser combinator library (<i>booya!</i>).</td></tr>
+			<tr><td><a href="https://www.npmjs.org/package/mocha">mocha</a></td>
+				<td>Still undefeated testing framework.</td></tr>
+		</table>
 	</div>
 </div>
 

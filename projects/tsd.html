@@ -25,26 +25,46 @@
 
 	<div class="ui one column grid">
 		<div class="column centeroid">
-			<div class="ui text menu">
-	<a class="item" href="/"><i class="home icon"></i> Home</a>
-	<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
-	<a class="item" href="https://github.com/bartvds/"><i class="github icon"></i> Github</a>
-<!--
-	<div class="right menu">
-		<div class="item">
-			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=watch&count=true"
-					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=fork&count=true"
-					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-		</div>
+			<div class="ui vertical segment">
+	<div class="ui text menu ">
+		<a class="item" href="/"><i class="home icon"></i> Home</a>
+		<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
+		<a class="item" href="https://github.com/bartvds/"><i class="sitemap icon"></i> Github</a>
+		<a class="item" href="https://github.com/Bartvds/bartvds.github.io/"><i class="github icon"></i> Source</a>
 	</div>
-	-->
 </div>
 
 
+			<div class="ui vertical basic segment">
+				<div class="ui text menu">
+					
+					<a class="item" href="/projects/dt.html">
+						DefinitelyTyped</a>
+					
+					<a class="item" href="/projects/framebuffer.html">
+						framebufferJS</a>
+					
+					<a class="item" href="/projects/grunt.html">
+						Grunt plugins</a>
+					
+					<a class="item" href="/projects/json-schema.html">
+						JSON-Schema</a>
+					
+					<a class="item" href="/projects/older.html">
+						older work</a>
+					
+					<a class="item" href="/projects/reporters.html">
+						reporters</a>
+					
+					<a class="item" href="/projects/tsd.html">
+						TSD</a>
+					
+				</div>
+			</div>
+
 			<h1 class="ui header">TSD</h1>
 
-			<table class="ui basic collapsing table">
+			<table class="ui basic compact collapsing table">
 <thead>
 <tr>
 <th></th>
@@ -72,7 +92,7 @@
 </table>
 <p>TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.</p>
 <p>It is used mostly as a CLI tool, similar to npm or bower. The content is pulled from the Github API, with a lot of (http-)caching. Internally it is mostly Promise/A and a little streaming code.</p>
-<p>This is my big main project, my significant contribution to the community. My baby, nasty and horrible on the inside, beautiful and amazing on the outside.</p>
+<p>This is my main project; my significant contribution to the community. My baby, nasty and horrible on the inside, beautiful and amazing on the outside.</p>
 <h2 id="project"  class="ui header">Project</h2>
 <p>The first version was my first big project in TypeScript, and also my biggest project on npm. Current release version has a fair amount of users for something as niche as this; it has Google Analytics integrated and that shows a steady 100-200 significant actions per day, with peaks around 300. On npm I see daily install rate of about 50-100. It is not quite bower-level but then many TypeScript definitions are installed via NuGet or pulled directly from the repository.</p>
 <p>I adopted this project from the previous owner who lacked time to take it further. His last version used a huge manually updated JSON file and was very much C#-inspired, heavy OO style. I rewrote it on the Github API in what looks like my old ActionScript 3 code pattern. By talking to Github directly it is always up-2-date.</p>

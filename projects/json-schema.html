@@ -25,26 +25,46 @@
 
 	<div class="ui one column grid">
 		<div class="column centeroid">
-			<div class="ui text menu">
-	<a class="item" href="/"><i class="home icon"></i> Home</a>
-	<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
-	<a class="item" href="https://github.com/bartvds/"><i class="github icon"></i> Github</a>
-<!--
-	<div class="right menu">
-		<div class="item">
-			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=watch&count=true"
-					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=fork&count=true"
-					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-		</div>
+			<div class="ui vertical segment">
+	<div class="ui text menu ">
+		<a class="item" href="/"><i class="home icon"></i> Home</a>
+		<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
+		<a class="item" href="https://github.com/bartvds/"><i class="sitemap icon"></i> Github</a>
+		<a class="item" href="https://github.com/Bartvds/bartvds.github.io/"><i class="github icon"></i> Source</a>
 	</div>
-	-->
 </div>
 
 
+			<div class="ui vertical basic segment">
+				<div class="ui text menu">
+					
+					<a class="item" href="/projects/dt.html">
+						DefinitelyTyped</a>
+					
+					<a class="item" href="/projects/framebuffer.html">
+						framebufferJS</a>
+					
+					<a class="item" href="/projects/grunt.html">
+						Grunt plugins</a>
+					
+					<a class="item" href="/projects/json-schema.html">
+						JSON-Schema</a>
+					
+					<a class="item" href="/projects/older.html">
+						older work</a>
+					
+					<a class="item" href="/projects/reporters.html">
+						reporters</a>
+					
+					<a class="item" href="/projects/tsd.html">
+						TSD</a>
+					
+				</div>
+			</div>
+
 			<h1 class="ui header">JSON-Schema</h1>
 
-			<table class="ui basic collapsing table">
+			<table class="ui basic compact collapsing table">
 <thead>
 <tr>
 <th></th>
@@ -57,22 +77,22 @@
 <td><a href="https://www.npmjs.org/package/tv4">https://www.npmjs.org/package/tv4</a></td>
 </tr>
 <tr>
-<td>npm</td>
+<td></td>
 <td><a href="https://www.npmjs.org/package/grunt-tv4">https://www.npmjs.org/package/grunt-tv4</a></td>
 </tr>
 <tr>
-<td>npm</td>
+<td></td>
 <td><a href="https://www.npmjs.org/package/tv4-reporter">https://www.npmjs.org/package/tv4-reporter</a></td>
 </tr>
 <tr>
-<td>npm</td>
+<td></td>
 <td><a href="https://www.npmjs.org/package/chai-json-schema">https://www.npmjs.org/package/chai-json-schema</a></td>
 </tr>
 </tbody>
 </table>
-<p>As an ex-ActionScripter I miss runtime validation in JavaScript (TypeScript), so early in my work on TSD I got involved in some JSON-Schema modules.</p>
+<p>As an ex-ActionScripter I miss runtime validation in JavaScript (TypeScript), so I got involved in a JSON-Schema validator.</p>
 <h2 id="tv4"  class="ui header">TV4</h2>
-<p>At that point the best schema validator for JavaScript was the tv4 package, but the project itself was a very low-tech, with no clear reproducible build/test-script, concatenation running in PHP (!) and the tests themselves in a home-rolled script. I proposed moving it to Grunt and mocha, and on a big pull request the owner made me contributor with Github push access.</p>
+<p>At that point the best schema validator for JavaScript was the tv4 package. While the project itself was a very low-tech, with no clear reproducible build/test-script, concatenation running in PHP (!) and the tests themselves in a home-rolled script. I proposed moving it to Grunt and mocha, and on a big pull request the owner made me contributor with Github push access.</p>
 <p>I converted the whole test suite to mocha + chai (now proclaim), added grunt, a minifier, JSHint.</p>
 <p>Then created node.js and phantomJS tests, Travis-CI integration, readme badges, source-map-support. The whole shebang that makes it testable and easily reproducible with a simple <code>npm install</code>.</p>
 <p>It paid off too, as it was now a lot easier for people to contribute when then can run the suite locally, and pull requests get tested on Travis-CI. This expanded the feature-set and slowly grows the users on npm, bower and component-io.</p>

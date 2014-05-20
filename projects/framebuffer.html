@@ -25,51 +25,74 @@
 
 	<div class="ui one column grid">
 		<div class="column centeroid">
-			<div class="ui text menu">
-	<a class="item" href="/"><i class="home icon"></i> Home</a>
-	<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
-	<a class="item" href="https://github.com/bartvds/"><i class="github icon"></i> Github</a>
-<!--
-	<div class="right menu">
-		<div class="item">
-			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=watch&count=true"
-					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-			<iframe src="http://ghbtns.com/github-btn.html?user=bartvds&repo=bartvds.github.io&type=fork&count=true"
-					allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-		</div>
+			<div class="ui vertical segment">
+	<div class="ui text menu ">
+		<a class="item" href="/"><i class="home icon"></i> Home</a>
+		<a class="item" href="https://www.npmjs.org/~bartvds"><i class="wrench icon"></i> NPM</a>
+		<a class="item" href="https://github.com/bartvds/"><i class="sitemap icon"></i> Github</a>
+		<a class="item" href="https://github.com/Bartvds/bartvds.github.io/"><i class="github icon"></i> Source</a>
 	</div>
-	-->
 </div>
 
 
+			<div class="ui vertical basic segment">
+				<div class="ui text menu">
+					
+					<a class="item" href="/projects/dt.html">
+						DefinitelyTyped</a>
+					
+					<a class="item" href="/projects/framebuffer.html">
+						framebufferJS</a>
+					
+					<a class="item" href="/projects/grunt.html">
+						Grunt plugins</a>
+					
+					<a class="item" href="/projects/json-schema.html">
+						JSON-Schema</a>
+					
+					<a class="item" href="/projects/older.html">
+						older work</a>
+					
+					<a class="item" href="/projects/reporters.html">
+						reporters</a>
+					
+					<a class="item" href="/projects/tsd.html">
+						TSD</a>
+					
+				</div>
+			</div>
+
 			<h1 class="ui header">framebufferJS</h1>
 
-			| | |
-|-|-|
-| code | https://github.com/Bartvds/framebufferJS/tree/browserified |
-| demo | https://rawgit.com/Bartvds/framebufferJS/browserified/demo/index.html |
+			<table class="ui basic compact collapsing table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td><a href="https://github.com/Bartvds/framebufferJS/tree/browserified">https://github.com/Bartvds/framebufferJS/tree/browserified</a></td>
+</tr>
+<tr>
+<td>demo</td>
+<td><a href="https://rawgit.com/Bartvds/framebufferJS/browserified/demo/index.html">https://rawgit.com/Bartvds/framebufferJS/browserified/demo/index.html</a></td>
+</tr>
+</tbody>
+</table>
+<p>This was a module I found on reddit and forked to have some fun because I hadn&#39;t done much display-code for a while.</p>
+<p>It is a simple pixel renderer for low-res-style games (big-pixels), it was made for a 32x32 pixel game-jam.</p>
+<h2 id="typedarray"  class="ui header">TypedArray</h2>
+<p>The original was terribly inefficient, using canvas <code>fillRect()</code> and a ugly triple-nested array model for the pixels.</p>
+<p>So I re-gutted the whole thing to use a single continuous ArrayBuffer (with Uint8Array/Uint8ClampedArray views). Then recoded the drawing loop for a nice speed boost on smaller sizes.</p>
+<p>Note I didn&#39;t touch the loops in the code (<em>yet</em>), as I intended to get this merged I&#39;d left that for the owner. If I had my way with those I&#39;d flip the loops for cache-coherency (y as outer loop) and pull all conditionals out and maybe even fold them into a single loop.</p>
+<h2 id="webgl"  class="ui header">WebGL</h2>
+<p>Because it was still slow at full-screen on my big 1920x1200 monitor I did a crash course WebGL and added a simple 2D crispy-upscaling renderer. The GL code and shader are probably the simplest ever, but GL is so alien I&#39;m proud I hacked it together on tutorials.</p>
+<p>As the pixel buffer is tiny Uint8Array we can easily pump it to the GPU every frame, an use it as a texture with nearest-neighbour sampling to fill fullscreen with big sharp pixels. It caps at the 60hz of <code>requestAnimationFrame</code> with plenty of CPU headroom.</p>
+<p>Sadly the owner got intimidated when I pushed a browserified version and so he didn&#39;t merge all of it, but I had my fun. Maybe later I pursue it further or convert it to TypeScript. MIT licence is awesome like that.</p>
 
-This was a module I found on reddit and forked to have some fun because I hadn't done much display-code for a while.
-
-It is a simple pixel renderer for low-res-style games (big-pixels), it was made for a 32x32 pixel game-jam.
-
-
-## TypedArray
-
-The original was terribly inefficient, using canvas `fillRect()` and a ugly triple-nested array model for the pixels.
-
-So I re-gutted the whole thing to use a single continuous ArrayBuffer (with Uint8Array/Uint8ClampedArray views). Then recoded the drawing loop for a nice speed boost on smaller sizes.
-
-Note I didn't touch the loops in the code (*yet*), as I intended to get this merged I'd left that for the owner. If I had my way with those I'd flip the loops for cache-coherency (y as outer loop) and pull all conditionals out and maybe even fold them into a single loop.
-
-
-## WebGL
-
-Because it was still slow at full-screen on my big 1920x1200 monitor I did a crash course WebGL and added a simple 2D crispy-upscaling renderer. The GL code and shader are probably the simplest ever, but GL is so alien I'm proud I hacked it together on tutorials.
-
-As the pixel buffer is tiny Uint8Array we can easily pump it to the GPU every frame, an use it as a texture with nearest-neighbour sampling to fill fullscreen with big sharp pixels. It caps at the 60hz of `requestAnimationFrame` with plenty of CPU headroom.
-
-Sadly the owner got intimidated when I pushed a browserified version and so he didn't merge all of it, but I had my fun. Maybe later I pursue it further or convert it to TypeScript. MIT licence is awesome like that.
 
 			<div class="ui horizontal icon divider">
 	<i class="unhide icon"></i>
