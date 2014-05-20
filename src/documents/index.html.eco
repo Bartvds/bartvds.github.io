@@ -42,7 +42,9 @@ title: 'Home'
 			<div class="ui item"><a href="https://www.npmjs.org/package/bluebird">bluebird</a> Promise/A with convenient wrappers and callback speeds</div>
 			<div class="ui item"><a href="https://www.npmjs.org/package/lazy.js">lazy.js</a> Collection iteration like underscore, but lazily evaluated; makes functional code go *fast*.</div>
 			<div class="ui item"><a href="https://www.npmjs.org/package/highland">highland</a> High-level streams library makes streaming easy as pie.</div>
-			<div class="ui item"><a href="https://www.npmjs.org/package/joi">joi</a> High-level streams library to makes streamings code accessible.</div>
+			<div class="ui item"><a href="https://www.npmjs.org/package/joi">joi</a> Advanced object validation with convenient API.</div>
+			<div class="ui item"><a href="https://www.npmjs.org/package/parsimmon">parsimmon</a> A monadic LL(infinity) parser combinator library (*booya*).</div>
+			<div class="ui item"><a href="https://www.npmjs.org/package/mocha">mocha</a> Still stands undefeated as most convenient testing framework.</div>
 		</ul>
 	</div>
 </div>
