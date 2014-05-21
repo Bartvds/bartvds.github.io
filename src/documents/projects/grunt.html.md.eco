@@ -10,13 +10,12 @@ description: 'Doing my bit to fill npm with grunting'
 
 I have a weak-spot for [Grunt](http://gruntjs.com), the task runner with its endless variation of plugins.
 
-So by now I have a whole bunch of small plugins on npm. According to the npm stats people actually use them too, which is a nice bonus.
-
-Strange enough the most simple ones get the most traffic, like grunt-execute. I'm not complaining though, it is very cool people find their use in such small things.
+So by now I have a whole bunch of small plugins on npm. According to the npm stats people actually use them too, which is a nice bonus. Strange enough the most simple ones get the most traffic, like grunt-execute. I'm not complaining though, it is very cool people find their use in small things.
 
 Hacking the plugins teaches you a lot about coding to solve specific problems and finding elegant options structures. And you get fast at it too, I now regularly write one-off multi-tasks to solve problems in my projects.
 
-I"ll not go into detail as the descriptions on npm speak for themselves.
+I'll not go into detail as the descriptions on npm speak for themselves.
+
 
 ## grunt-ts
 

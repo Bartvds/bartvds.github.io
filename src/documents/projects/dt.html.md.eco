@@ -51,7 +51,7 @@ At this point it looks real enough the other org members are starting to get int
 
 Because I'm not a natural designer I depend on the framework, but it was easy to get something good looking out there: with plenty of white-space and a good font you can go a long way.
 
-Docpad is a static site generator so I've also set it up to be re-build via Travis-CI, and use a bot-account to push the build to github-pages.
+Docpad is a static site generator so I've also set it up to be re-build via Travis-CI, and use a [bot-account](https://github.com/dt-bot) to push the build to github-pages.
 
 
 ### Badges
@@ -70,7 +70,7 @@ I'm looking into adding some webhooks and a node.js webservice to automate featu
 
 One of my favourite ways to procrastinate is writing new type definitions. I wrote some for [bluebird](https://github.com/borisyankov/DefinitelyTyped/tree/master/bluebird), [highland](https://github.com/borisyankov/DefinitelyTyped/tree/master/highland), [parsimmon](https://github.com/borisyankov/DefinitelyTyped/tree/master/parsimmon), [joi](https://github.com/borisyankov/DefinitelyTyped/tree/master/joi), [lazy.js](https://github.com/borisyankov/DefinitelyTyped/tree/master/lazy.js) and a whole bunch of smaller modules. It is an interesting way to kill some time because your learn a lot about the package your are modelling and it is more of a craft then a science. And the actual implementation is not trivial either: it takes some experience to get fast at it.
 
-Recently I imported ~30 definitions from an existing repository that wanted to merge with DefinitelyTyped. It had like 60 definitions, with a lot over overlap. Other people didn't look forward to the slog but I attacked it with a fat google-spreadsheet and moved all the good parts over to our repository. The pull request was pretty epic.
+Recently I imported ~30 definitions from an existing repository that wanted to merge with DefinitelyTyped. It had like 60 definitions, with a lot of overlap. Other people didn't look forward to the slog but I attacked it with a fat google-spreadsheet and moved all the good parts over to our repository. The pull request was pretty epic.
 
 
 ### Other stuff
