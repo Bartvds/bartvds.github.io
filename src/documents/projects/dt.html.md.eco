@@ -66,8 +66,15 @@ Everyone likes some bling on his projects so I moved to start providing readme-b
 I'm looking into adding some webhooks and a node.js webservice to automate features and go for the next level. Using some modules from npm this is technically easy but we're not sure off the problems we try to solve, let alone the solution we need. But we have the technology, it will be build in the next months. On the shortlist is a [Gitter](https://gitter.im/) integration, should be easy enough.
 
 
+### Definitions
+
+One of my favourite ways to procrastinate is writing new type definitions. I wrote some for [bluebird](https://github.com/borisyankov/DefinitelyTyped/tree/master/bluebird), [highland](https://github.com/borisyankov/DefinitelyTyped/tree/master/highland), [parsimmon](https://github.com/borisyankov/DefinitelyTyped/tree/master/parsimmon), [joi](https://github.com/borisyankov/DefinitelyTyped/tree/master/joi), [lazy.js](https://github.com/borisyankov/DefinitelyTyped/tree/master/lazy.js) and a whole bunch of smaller modules. It is an interesting way to kill some time because your learn a lot about the package your are modelling and it is more of a craft then a science. And the actual implementation is not trivial either: it takes some experience to get fast at it.
+
+Recently I imported ~30 definitions from an existing repository that wanted to merge with DefinitelyTyped. It had like 60 definitions, with a lot over overlap. Other people didn't look forward to the slog but I attacked it with a fat google-spreadsheet and moved all the good parts over to our repository. The pull request was pretty epic.
+
+
 ### Other stuff
 
-Plenty of small side projects. For example I drive the vision and feedback on a yeoman generator a collaborator is building, it will generate boilerplate for the definitions.
+Plenty of small side projects. For example I drive the vision and feedback on a [yeoman generator](https://github.com/DefinitelyTyped/generator-deftyped) a collaborator is building, it will generate boilerplate for the definitions.
 
 And I scout for people and projects who can make a JavaScript analyser that can generate typings from Javascript or JSDocs. Meanwhile I try to get the organisation to step up their game, for example by supporting [BountySource](https://www.bountysource.com/), writing guides for the site and do many other enhancements.

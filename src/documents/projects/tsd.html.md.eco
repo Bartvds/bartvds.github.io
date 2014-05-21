@@ -37,7 +37,7 @@ The previous version had its own website with a simple search feature. So after 
 
 At this point the JSON is semi-manually updated using a grunt task. It could be automated now, but that might happen together with a future DefinitelyTyped update (infrastructure thing, ask me about it).
 
-This is queued fro a redesign: the DefinitelyTyped organisation recently got joined by a real designer, so I've left it as is, with my cyber-cyan color scheme and CSS glitches.
+This is queued fro a redesign: the DefinitelyTyped organisation recently was joined by a real designer, so I've left it as is, with my cyber-cyan color scheme and funky CSS glitches.
 
 
 ## Future
@@ -46,7 +46,7 @@ After a year of using npm and reading blogs I now see the TSD architecture is le
 
 We need that modular code for other DefinitelyTyped projects and I want the whole thing to be browserifiable so people can embed it in online code editors.
 
-Overall I'm still pretty happy with it. Even though I now disfavor the general architecture I'd still stand for the choices made, most of all because it works as intended and solves a real problem.
+Overall I'm still pretty happy with it even though I now disfavor the general architecture I'd still stand for the choices made, most of all because it works as intended and solves a real problem.
 
 And there are enough users to make it a real thing and send interesting bug reports (I love my Japanese power-users :)
 
