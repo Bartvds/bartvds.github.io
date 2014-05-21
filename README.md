@@ -4,7 +4,7 @@
 
 Website content for [bartvds.github.io](http://bartvds.github.io/).
 
-The [gh-pages](https://github.com/bartvds/bartvds.github.io/tree/master) branch holds live github.io content generated from the [master](https://github.com/bartvds/bartvds.github.io/tree/source) branch.
+The [master](https://github.com/bartvds/bartvds.github.io/tree/master) branch holds live github.io content generated from the [source](https://github.com/bartvds/bartvds.github.io/tree/source) branch.
 
 The site build with [Grunt](http://www.gruntjs.com) and generated using [docpad](http://docpad.org), a static site generator complete with watch tasks, development server with LiveReload and [many plugins](http://docpad.org/docs/plugins). Publishing happens using [grunt-gh-pages](https://github.com/tschaub/grunt-gh-pages) and [Travis-CI](https://travis-ci.org/).
 
