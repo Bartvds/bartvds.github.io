@@ -6,6 +6,7 @@ description: 'Projects from another time'
 
 A collection of the more interesting work I did for MediaMonks and the dream-time before that.
 
+
 ## Het Huis Anubis
 
 |  |  |
@@ -26,14 +27,16 @@ The original games were Dutch-language:
 
 We internationalised the last two and they ran on Nickelodeon portals in Belgium, Germany, UK, Sweden, Denmark and Switzerland.
 
+
 ## BudUnited
 
 | | |
 |-|-|
-| Screenshot | [budhouse.jpg](<%-@site.url%>/media/budhouse.jpg) |
-| More screenshots (PDF) | [Budhouse_USA.pdf](<%-@site.url%>/media/Budhouse_USA.pdf) |
+| screenshot | [budhouse.jpg](<%-@site.url%>/media/budhouse.jpg) |
+| more screenshots (PDF) | [Budhouse_USA.pdf](<%-@site.url%>/media/Budhouse_USA.pdf) |
 
 During the World Cup Football in South-Africa the American beer company Bud hosted a big-brother-style YouTube channel. I built the channels front-end in Flash. This was a major international project with a lot of pressure and a complicated back-end data-feed.
+
 
 ## TedX Brain
 
@@ -42,6 +45,7 @@ During the World Cup Football in South-Africa the American beer company Bud host
 | FWA | [tedx-interactive-brain](http://www.thefwa.com/site/tedx-interactive-brain) |
 
 For the Amsterdam edition of TedX we made an interactive 3D brain that displayed tweets in real-time. It was made in Flash and ran on a Stage3D engine.
+
 
 ## The House Anubis
 
@@ -54,6 +58,7 @@ For the Amsterdam edition of TedX we made an interactive 3D brain that displayed
 This were my last projects at MediaMonks: the next generation of the games for House Anubis for nickelodeon USA. This time in 2.5D perspective. These were playable on the Nick.com and internationalised for many locales.
 
 It is a home-grown Flash AS3 engine, I did all the programming, technical production and deployment. It were a rough project with a tight schedule but we rocked it for some FWA's.
+
 
 ## Back to 2007
 
