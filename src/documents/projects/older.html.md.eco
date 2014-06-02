@@ -7,38 +7,29 @@ description: 'Projects from another time'
 A collection of the more interesting work I did for MediaMonks and the dream-time before that.
 
 
-## Het Huis Anubis
-
-|  |  |
-|--|--|
-| clubhouse | [anubis-house.jpg](<%-@site.url%>/media/anubis-house.jpg) |
-| screenshot | [anubis-01](<%-@site.url%>/media/anubis-01.jpg) |
-|   | [anubis-02](<%-@site.url%>/media/anubis-02.jpg) |
-
-Nickelodeon Benelux approached MediaMonks with a request to make an adventure game for kids. So we build a big Zelda-like exploration and adventure game with an Egyptian mystery theme. The game was released episodic, with a new release every few weeks.
-
-This game was a huge success and got 2 sequels. I did all the programming and technical production of the game, and did the periodic deployments. There were many quests, an in-game currency, minigames, online saving functionality and much more.
-
-The original games were Dutch-language:
-
-- Het Huis Anubis - Masker van Mofid
-- Het Huis Anubis - Tombes van Apep
-- Het Huis Anubis - De Vloek van Victor
-
-We internationalised the last two and they ran on Nickelodeon portals in Belgium, Germany, UK, Sweden, Denmark and Switzerland.
-
-
-## The House Anubis
+## Chocovore
 
 | | |
 |-|-|
-| The Secrets Within @ FWA| [house-of-anubis-the-secrets-within](http://www.thefwa.com/site/house-of-anubis-the-secrets-within) |
-| The Song of Dreams @ FWA | [house-of-anubis-the-song-of-dreams](http://www.thefwa.com/site/house-of-anubis-the-song-of-dreams) |
-| more screenshots (PDF) | [House_Anubis_USA.pdf](https://bartvds.github.io/media/House_Of_Anubis_USA.pdf) |
+| screenshot | [01.jpg](<%-@site.url%>/media/chocovore01.jpg) |
 
-This were my last projects at MediaMonks: the next generation of the games for House Anubis for Nickelodeon USA. This time in 2.5D perspective. These were playable on the Nick.com and internationalised for many locales.
+A simple game for a brand of chocolate breakfast cereal, featuring the 'Chocovore', a pacman-like creature who eats his way through a field of chocolate. The goal is to eat as much as possible but chocolate monsters will spawn in the areas you cleared, so you only have limited time before they chase you down.
 
-It is a home-grown Flash AS3 engine, I did all the programming, technical production and deployment. It were a rough project with a tight schedule but we rocked it for some FWA's.
+
+## Graduation project
+
+|  |  |
+|--|--|
+| screenshot | [menu](<%-@site.url%>/media/menu.jpg) |
+|   | [bot](<%-@site.url%>/media/bot.jpg) |
+|   | [kip](<%-@site.url%>/media/kip.jpg) |
+|   | [stamp](<%-@site.url%>/media/stamp.jpg) |
+| rigging | [mobRigs](<%-@site.url%>/media/mobRigs.jpg) |
+|   | [lights](<%-@site.url%>/media/lightSpot.jpg) |
+|   | [IDE editor](<%-@site.url%>/media/Flash_IDE_roomEdit01.png) |
+|   | [boss rig](<%-@site.url%>/media/boss_stage.png) |
+
+For my graduation project we build a platform game. For it's time it was guite advanced as it had a realtime lighting system, vector images prerendered to bitmaps. All level-editing was done inside the Flash IDE using magic MovieClips that indicated various interactive objects.
 
 
 ## BudUnited

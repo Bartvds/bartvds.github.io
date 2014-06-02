@@ -1,0 +1,46 @@
+---
+layout: 'project'
+title: 'Anubis'
+description: 'House Anubis series'
+---
+
+
+## Het Huis Anubis
+
+|  |  |
+|--|--|
+| clubhouse | [anubis-house.jpg](<%-@site.url%>/media/anubis-house.jpg) |
+| light | [anubisGlow.jpg](<%-@site.url%>/media/anubisGlow.jpg) |
+|   | [key door](<%-@site.url%>/media/Anubis_screeny_KeyDoorGold1.jpg) |
+|   | [quiz tombe](<%-@site.url%>/media/Anubis_screeny_quizTombe01.jpg) |
+|   | [nienke key](<%-@site.url%>/media/nienkeGoldKey.png) |
+| screenshot | [anubis-01](<%-@site.url%>/media/anubis-01.jpg) |
+|   | [anubis-02](<%-@site.url%>/media/anubis-02.jpg) |
+
+Nickelodeon Benelux approached MediaMonks with a request to make an adventure game for kids. So we build a big Zelda-like exploration and adventure game with an Egyptian mystery theme. The game was released episodic, with a new release every few weeks.
+
+This game was a huge success and got 2 sequels. I did all the programming and technical production of the game, and did the periodic deployments. There were many quests, an in-game currency, minigames, online saving functionality and much more.
+
+The original games were Dutch-language:
+
+- Het Huis Anubis - Masker van Mofid
+- Het Huis Anubis - Tombes van Apep
+- Het Huis Anubis - De Vloek van Victor
+
+We internationalised the last two and they ran on Nickelodeon portals in Belgium, Germany, UK, Sweden, Denmark and Switzerland.
+
+
+## The House Anubis
+
+| | |
+|-|-|
+| The Secrets Within @ FWA| [house-of-anubis-the-secrets-within](http://www.thefwa.com/site/house-of-anubis-the-secrets-within) |
+| The Song of Dreams @ FWA | [house-of-anubis-the-song-of-dreams](http://www.thefwa.com/site/house-of-anubis-the-song-of-dreams) |
+| screenshots | [menu](<%-@site.url%>/media/anubisusa_screen01.jpg) |
+| | [room](<%-@site.url%>/media/anubisusa_screen02.jpg) |
+| | [cup-of-life](<%-@site.url%>/media/anubisusa_screen03.jpg) |
+| more screenshots (PDF) | [House_Anubis_USA.pdf](https://bartvds.github.io/media/House_Of_Anubis_USA.pdf) |
+
+This were my last projects at MediaMonks: the next generation of the games for House Anubis for Nickelodeon USA. This time in 2.5D perspective. These were playable on the Nick.com and internationalised for many locales.
+
+It is a home-grown Flash AS3 engine, I did all the programming, technical production and deployment. It were a rough project with a tight schedule but we rocked it for some FWA's.
