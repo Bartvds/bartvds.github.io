@@ -29,7 +29,7 @@ A simple game for a brand of chocolate breakfast cereal, featuring the 'Chocovor
 |   | [IDE editor](<%-@site.url%>/media/Flash_IDE_roomEdit01.png) |
 |   | [boss rig](<%-@site.url%>/media/boss_stage.png) |
 
-For my graduation project we build a platform game. For it's time it was guite advanced as it had a realtime lighting system, vector images prerendered to bitmaps. All level-editing was done inside the Flash IDE using magic MovieClips that indicated various interactive objects.
+For my graduation project we build a platform game. For its time it was quite advanced as it had a realtime lighting system and vector images prerendered to bitmaps. All level-editing was done inside the Flash IDE using magic MovieClips that indicated various interactive objects.
 
 
 ## BudUnited
