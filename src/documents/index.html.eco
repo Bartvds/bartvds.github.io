@@ -50,6 +50,8 @@ title: 'Home'
 	</div>
 	<div class="ui row">
 		<table class="ui basic compact collapsing table segment">
+			<tr><td><a href="https://www.npmjs.org/package/pixi">pixi</a></td>
+				<td>Canvas &amp; WebGL graphics with Flash-style API</td></tr>
 			<tr><td><a href="https://www.npmjs.org/package/bluebird">bluebird</a></td>
 				<td>Promise/A with convenient wrappers at callback speeds</td></tr>
 			<tr><td><a href="https://www.npmjs.org/package/lazy.js">lazy.js</a></td>
