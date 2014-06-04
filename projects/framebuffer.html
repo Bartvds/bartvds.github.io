@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>framebufferJS | Bartvds</title>
+	<title>lorez | Bartvds</title>
 	<meta name="description" content="Pixel buffers for low-rez games" />
 	<meta name="keywords" content="bart van der schoor" />
 
@@ -45,7 +45,7 @@
 						DefinitelyTyped</a>
 					
 					<a class="item" href="/projects/framebuffer.html">
-						framebufferJS</a>
+						lorez</a>
 					
 					<a class="item" href="/projects/grunt.html">
 						Grunt plugins</a>
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 
-			<h1 class="ui header">framebufferJS</h1>
+			<h1 class="ui header">lorez</h1>
 
 			<table class="ui basic compact collapsing table">
 <thead>
@@ -76,25 +76,31 @@
 </thead>
 <tbody>
 <tr>
-<td>code</td>
-<td><a href="https://github.com/Bartvds/framebufferJS/tree/browserified">github/browserified</a></td>
+<td>lorez</td>
+<td><a href="https://github.com/Bartvds/lorez">github.com/Bartvds/lorez</a></td>
 </tr>
 <tr>
 <td>demo</td>
-<td><a href="https://rawgit.com/Bartvds/framebufferJS/browserified/demo/index.html">rawgit/index</a></td>
+<td><a href="https://bartvds.github.io/lorez/">bartvds.github.io/lorez</a></td>
 </tr>
 </tbody>
 </table>
-<p>This was a module I found on reddit and forked to have some fun because I hadn&#39;t done much display-code for a while.</p>
-<p>It is a simple pixel renderer for low-res-style games (big-pixels), it was made for a 32x32 pixel game-jam.</p>
+<p>This was originally a module I found on reddit and I forked it to have some fun because I hadn&#39;t done much display-code for a while.</p>
+<p>It was a simple pixel renderer for low-res-style games (big-pixels), it was made for a 32x32 pixel game-jam.</p>
+<p>Many revisions later I migrated it to TypeScript and it is now becoming quite a complete render engine with many helpers.</p>
 <h2 id="typedarray"  class="ui header">TypedArray</h2>
 <p>The original was terribly inefficient, using canvas <code>fillRect()</code> and a ugly triple-nested array model for the pixels.</p>
 <p>So I re-gutted the whole thing to use a single continuous ArrayBuffer (with Uint8Array/Uint8ClampedArray views). Then recoded the drawing loop for a nice speed boost on smaller sizes.</p>
-<p>Note I didn&#39;t touch the loops in the code (<em>yet</em>), as I intended to get this merged I&#39;d left that for the owner. If I had my way with those I&#39;d flip the loops for cache-coherency (y as outer loop) and pull all conditionals out and maybe even fold them into a single loop.</p>
+<p>Note I didn&#39;t touch the loops in the code (<em>yet</em>), as I intended to get this merged I&#39;d left that for the owner.</p>
 <h2 id="webgl"  class="ui header">WebGL</h2>
 <p>Because it was still slow at full-screen on my big 1920x1200 monitor I did a crash course WebGL and added a simple 2D crispy-upscaling renderer. The GL code and shader are probably the simplest ever, but GL is so alien I&#39;m proud I hacked it together on tutorials.</p>
 <p>As the pixel buffer is tiny Uint8Array we can easily pump it to the GPU every frame, an use it as a texture with nearest-neighbour sampling to fill fullscreen with big sharp pixels. It caps at the 60hz of <code>requestAnimationFrame</code> with plenty of CPU headroom.</p>
-<p>Sadly the owner got intimidated when I pushed a browserified version and so he didn&#39;t merge all of it, but I had my fun. Maybe later I pursue it further or convert it to TypeScript. MIT licence is awesome like that.</p>
+<p>Sadly the owner got intimidated when I pushed a browserified version and so he didn&#39;t merge all of it.</p>
+<h2 id="lorez-typescript"  class="ui header">lorez &amp; TypeScript</h2>
+<p>A few weeks later and now everything is different, I cut the fork and moved the project ahead. It is now written in TypeScript and has a ton of optimisations and additional features. It has become <em>heavy</em> in code but it is screen-blistering fast in rendering.</p>
+<p>WebGL is now active by default, there is some alpha channel support, sprite-sheets, perlin-noise (imported via stackoverflow of course), PNG/JPG loaders and the demo player is improved with history API. Also the font is expanded with numerals and special-character and the demos auto-deploy from Travis. I&#39;ve flipped the loops for cache-coherency (y as outer loop), pulled many conditionals out the loops and did some other magic to make the profilers happy.</p>
+<p>It&#39;s never enough, there is always a slow method and the whole thing should have alpha support and maybe some blendmodes.</p>
+<p>Im working to get it ready for npm and bower and relaunch it on /r/gamedev.</p>
 
 
 			<div class="ui horizontal icon divider">
