@@ -1,17 +1,19 @@
 ---
 layout: 'project'
-title: 'framebufferJS'
+title: 'lorez'
 description: 'Pixel buffers for low-rez games'
 ---
 
 | | |
 |-|-|
-| code | [github/browserified](https://github.com/Bartvds/framebufferJS/tree/browserified) |
-| demo | [rawgit/index](https://rawgit.com/Bartvds/framebufferJS/browserified/demo/index.html) |
+| lorez | [github.com/Bartvds/lorez](https://github.com/Bartvds/lorez) |
+| demo | [bartvds.github.io/lorez](https://bartvds.github.io/lorez/) |
 
-This was a module I found on reddit and forked to have some fun because I hadn't done much display-code for a while.
+This was originally a module I found on reddit and I forked it to have some fun because I hadn't done much display-code for a while.
 
-It is a simple pixel renderer for low-res-style games (big-pixels), it was made for a 32x32 pixel game-jam.
+It was a simple pixel renderer for low-res-style games (big-pixels), it was made for a 32x32 pixel game-jam.
+
+Many revisions later I migrated it to TypeScript and it is now becoming quite a complete render engine with many helpers.
 
 
 ## TypedArray
@@ -20,7 +22,7 @@ The original was terribly inefficient, using canvas `fillRect()` and a ugly trip
 
 So I re-gutted the whole thing to use a single continuous ArrayBuffer (with Uint8Array/Uint8ClampedArray views). Then recoded the drawing loop for a nice speed boost on smaller sizes.
 
-Note I didn't touch the loops in the code (*yet*), as I intended to get this merged I'd left that for the owner. If I had my way with those I'd flip the loops for cache-coherency (y as outer loop) and pull all conditionals out and maybe even fold them into a single loop.
+Note I didn't touch the loops in the code (*yet*), as I intended to get this merged I'd left that for the owner.
 
 
 ## WebGL
@@ -29,5 +31,15 @@ Because it was still slow at full-screen on my big 1920x1200 monitor I did a cra
 
 As the pixel buffer is tiny Uint8Array we can easily pump it to the GPU every frame, an use it as a texture with nearest-neighbour sampling to fill fullscreen with big sharp pixels. It caps at the 60hz of `requestAnimationFrame` with plenty of CPU headroom.
 
-Sadly the owner got intimidated when I pushed a browserified version and so he didn't merge all of it, but I had my fun. Maybe later I pursue it further or convert it to TypeScript. MIT licence is awesome like that.
+Sadly the owner got intimidated when I pushed a browserified version and so he didn't merge all of it.
 
+
+## lorez & TypeScript
+
+A few weeks later and now everything is different, I cut the fork and moved the project ahead. It is now written in TypeScript and has a ton of optimisations and additional features. It has become *heavy* in code but it is screen-blistering fast in rendering.
+
+WebGL is now active by default, there is some alpha channel support, sprite-sheets, perlin-noise (imported via stackoverflow of course), PNG/JPG loaders and the demo player is improved with history API. Also the font is expanded with numerals and special-character and the demos auto-deploy from Travis. I've flipped the loops for cache-coherency (y as outer loop), pulled many conditionals out the loops and did some other magic to make the profilers happy.
+
+It's never enough, there is always a slow method and the whole thing should have alpha support and maybe some blendmodes.
+
+Im working to get it ready for npm and bower and relaunch it on /r/gamedev.
